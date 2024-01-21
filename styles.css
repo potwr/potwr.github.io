@@ -1,0 +1,247 @@
+body {
+    background-color: #1C140A;
+}
+
+.header {
+    margin: auto;
+    margin-top: 50px;
+    width: 600px;
+}
+
+.header-logo {
+    height: 50px;
+    width: auto;
+    margin-left: -10px;
+    margin-bottom: -10px;
+}
+
+.header-title {
+    font-family: 'Pirata One';
+    font-size: 30px;
+    color: #C44E28;
+
+}
+
+.wrapper {
+    margin: auto;
+    margin-top: 20px;
+    width: 600px;
+}
+
+button.add-gamer, button.run-add-player, button.sort-players {
+    font-family: 'Pirata One';
+    font-size: 30px;
+    color: #F7F5F3;
+    background-color: #725542;
+    border: none;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+button.run-add-player {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+button.sort-players {
+    margin-left: 10px;
+}
+
+button.close-add-player-alert {
+    float: right;
+    width: 30px;
+    height: 30px;
+    background-color: #725542;
+    color: #F7F5F3;
+    font-family: 'Pirata One';
+    font-size: 25px;
+    line-height: 30px;
+    margin-top: 5px;
+    margin-right: 5px;
+    border: none;
+    padding: 0px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.add-player-alert {
+    width: 400px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #F7F5F3;
+    display: none;
+}
+
+.add-player-alert-header {
+    width: 100%;
+    height: 40px;
+    background-color: #725542;
+    font-family: 'Pirata One';
+    color: #F7F5F3;
+}
+
+.add-player-alert-header span {
+    line-height: 40px;
+    margin-left: 10px;
+    font-size: 25px;
+}
+
+.add-player-alert-body {
+    font-family: 'Crimson Text';
+    background-color: #F7F5F3;
+    height: 100%;
+    margin-top: 0px;
+}
+
+.add-player-alert-body form {
+    margin: 10px;
+    margin-bottom: 50px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.add-player-alert-body form input {
+    margin-bottom: 10px;
+    font-size: 30px;
+    line-height: 30px;
+    font-family: 'Pirata One';
+    border: none;
+    background-color: #9A876B;
+    padding-left: 5px;
+    color: #F7F5F3;
+}   
+
+.add-player-alert-body form input#playername {
+    width: 90%;
+}  
+
+.player-table {
+    width: 600px;
+    margin-top: 20px;
+}
+
+.player-line {
+    width: 600px;
+}
+
+.player-line div {
+    float: left;
+}
+
+.player-line-order-number {
+    margin-top: 15px;
+    width: 40px;
+    height: 40px;
+    font-family: 'Pirata One';
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #725542;
+    color: #1C140A;
+}
+
+.player-line-name {
+    padding-left: 15px;
+    width: 465px;
+    height: 50px;
+    font-family: 'Pirata One';
+    font-size: 50px;
+    color: #C44E28;
+    border-bottom: 5px solid #725542;
+}
+
+button.delete-player {
+    width: 40px;
+    height: 45px;
+    float: left;
+    margin-top: 10px;
+    font-family: 'Pirata One';
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+    border: none;
+    background-color: transparent;
+    border-bottom: 5px solid #725542;
+    color: #725542;
+}
+
+.player-line-initiative {
+    margin-top: 15px;
+    width: 40px;
+    height: 40px;
+    font-family: 'Pirata One';
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #725542;
+    color: #725542;
+}
+
+.player-line-initiative-input, .player-line-initiative-input:active, .player-line-initiative-input:focus {
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    font-family: 'Pirata One';
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+    color: #1C140A;
+    border: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.monster-name {
+    color: #730b00;
+}
+
+.default-player1 {
+    color: rgb(97, 166, 201);
+}
+
+.default-player2 {
+    color: rgb(194, 183, 146);
+}
+
+.default-player3 {
+    color: rgb(172, 123, 176);
+}
+
+.default-player4 {
+    color: rgb(106, 123, 153);
+}
+
+.default-player5 {
+    color: rgb(174, 208, 118);
+}
+
+.character-symbol {
+    width: 40px;
+    margin-right: 10px;
+}
+
+
+textarea:hover, 
+textarea:active, 
+textarea:focus, 
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active
+{
+    outline:0px !important;
+    -webkit-appearance: none;
+    box-shadow: none !important;
+}
