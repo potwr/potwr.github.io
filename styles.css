@@ -147,7 +147,7 @@ button:hover {
 
 .player-line-name {
     padding-left: 15px;
-    width: 465px;
+    width: 445px;
     height: 50px;
     font-family: 'Pirata One';
     font-size: 50px;
@@ -172,7 +172,7 @@ button.delete-player {
 
 .player-line-initiative {
     margin-top: 15px;
-    width: 40px;
+    width: 60px;
     height: 40px;
     font-family: 'Pirata One';
     font-size: 30px;
