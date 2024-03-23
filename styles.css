@@ -165,7 +165,7 @@ input#playermonster {
 
 .player-line-name {
     padding-left: 15px;
-    width: 700px;
+    width: 650px;
     height: 110px;
     font-family: 'Pirata One';
     font-size: 100px;
@@ -190,7 +190,7 @@ button.delete-player {
 
 .player-line-initiative {
     margin-top: 15px;
-    width: 100px;
+    width: 130px;
     height: 100px;
     font-family: 'Pirata One';
     font-size: 80px;
