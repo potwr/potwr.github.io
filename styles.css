@@ -5,58 +5,61 @@ body {
 .header {
     margin: auto;
     margin-top: 50px;
-    width: 600px;
+    margin-bottom: 100px;
+    width: 1000px;
 }
 
 .header-logo {
-    height: 50px;
-    width: auto;
+    width: 50%;
+    height: auto;
     margin-left: -10px;
     margin-bottom: -10px;
 }
 
 .header-title {
     font-family: 'Pirata One';
-    font-size: 30px;
+    font-size: 50px;
     color: #C44E28;
 
 }
 
 .wrapper {
     margin: auto;
-    margin-top: 20px;
-    width: 600px;
+    margin-top: 40px;
+    margin-bottom: 100px;
+    width: 1000px;
 }
 
 button.add-gamer, button.run-add-player, button.sort-players {
     font-family: 'Pirata One';
-    font-size: 30px;
+    font-size: 80px;
     color: #F7F5F3;
     background-color: #725542;
     border: none;
     padding-left: 10px;
     padding-right: 10px;
+    margin-bottom: 20px;
 }
 
 button.run-add-player {
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
+    position: relative;
+    left: 490px;
+    bottom: 25px;
 }
 
 button.sort-players {
-    margin-left: 10px;
+    margin-left: 30px;
 }
 
 button.close-add-player-alert {
     float: right;
-    width: 30px;
-    height: 30px;
+    width: 100px;
+    height: 90px;
     background-color: #725542;
     color: #F7F5F3;
     font-family: 'Pirata One';
-    font-size: 25px;
-    line-height: 30px;
+    font-size: 80px;
+    line-height: 100px;
     margin-top: 5px;
     margin-right: 5px;
     border: none;
@@ -68,7 +71,8 @@ button:hover {
 }
 
 .add-player-alert {
-    width: 400px;
+    width: 900px;
+    height: 400px;
     position: absolute;
     top: 40%;
     left: 50%;
@@ -79,16 +83,16 @@ button:hover {
 
 .add-player-alert-header {
     width: 100%;
-    height: 40px;
+    height: 100px;
     background-color: #725542;
     font-family: 'Pirata One';
     color: #F7F5F3;
 }
 
 .add-player-alert-header span {
-    line-height: 40px;
-    margin-left: 10px;
-    font-size: 25px;
+    line-height: 100px;
+    margin-left: 30px;
+    font-size: 70px;
 }
 
 .add-player-alert-body {
@@ -99,34 +103,48 @@ button:hover {
 }
 
 .add-player-alert-body form {
-    margin: 10px;
+    margin: 30px;
     margin-bottom: 50px;
-    font-size: 20px;
+    font-size: 50px;
     font-weight: bold;
+    width: 930px;
 }
 
 .add-player-alert-body form input {
     margin-bottom: 10px;
-    font-size: 30px;
-    line-height: 30px;
+    font-size: 70px;
+    line-height: 90px;
     font-family: 'Pirata One';
     border: none;
     background-color: #9A876B;
-    padding-left: 5px;
+    padding-left: 10px;
     color: #F7F5F3;
-}   
+}  
+
+input#playermonster {
+    -ms-transform: scale(4); /* IE */
+  -moz-transform: scale(4); /* FF */
+  -webkit-transform: scale(4); /* Safari and Chrome */
+  -o-transform: scale(4); /* Opera */
+  transform: scale(4);
+  margin-right: 20px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
 
 .add-player-alert-body form input#playername {
     width: 90%;
 }  
 
 .player-table {
-    width: 600px;
+    width: 1000px;
     margin-top: 20px;
 }
 
 .player-line {
-    width: 600px;
+    width: 1000px;
+    display: inline-block;
+    margin-bottom: 50px;
 }
 
 .player-line div {
@@ -135,11 +153,11 @@ button:hover {
 
 .player-line-order-number {
     margin-top: 15px;
-    width: 40px;
-    height: 40px;
+    width: 100px;
+    height: 100px;
     font-family: 'Pirata One';
-    font-size: 30px;
-    line-height: 40px;
+    font-size: 80px;
+    line-height: 100px;
     text-align: center;
     background-color: #725542;
     color: #1C140A;
@@ -147,21 +165,21 @@ button:hover {
 
 .player-line-name {
     padding-left: 15px;
-    width: 445px;
-    height: 50px;
+    width: 700px;
+    height: 110px;
     font-family: 'Pirata One';
-    font-size: 50px;
+    font-size: 100px;
     color: #C44E28;
     border-bottom: 5px solid #725542;
 }
 
 button.delete-player {
-    width: 40px;
-    height: 45px;
+    width: 50px;
+    height: 105px;
     float: left;
     margin-top: 10px;
     font-family: 'Pirata One';
-    font-size: 20px;
+    font-size: 50px;
     line-height: 40px;
     text-align: center;
     border: none;
@@ -172,11 +190,11 @@ button.delete-player {
 
 .player-line-initiative {
     margin-top: 15px;
-    width: 60px;
-    height: 40px;
+    width: 130px;
+    height: 100px;
     font-family: 'Pirata One';
-    font-size: 30px;
-    line-height: 40px;
+    font-size: 80px;
+    line-height: 100px;
     text-align: center;
     background-color: #725542;
     color: #725542;
@@ -184,11 +202,11 @@ button.delete-player {
 
 .player-line-initiative-input, .player-line-initiative-input:active, .player-line-initiative-input:focus {
     background-color: transparent;
-    width: 60px;
-    height: 40px;
+    width: 130px;
+    height: 100px;
     font-family: 'Pirata One';
-    font-size: 30px;
-    line-height: 40px;
+    font-size: 80px;
+    line-height: 100px;
     text-align: center;
     color: #1C140A;
     border: none;
@@ -227,7 +245,7 @@ input::-webkit-inner-spin-button {
 }
 
 .character-symbol {
-    width: 40px;
+    width: 80px;
     margin-right: 10px;
 }
 
