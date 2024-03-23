@@ -184,7 +184,7 @@ button.delete-player {
 
 .player-line-initiative-input, .player-line-initiative-input:active, .player-line-initiative-input:focus {
     background-color: transparent;
-    width: 40px;
+    width: 60px;
     height: 40px;
     font-family: 'Pirata One';
     font-size: 30px;
@@ -192,6 +192,8 @@ button.delete-player {
     text-align: center;
     color: #1C140A;
     border: none;
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
 input::-webkit-outer-spin-button,
