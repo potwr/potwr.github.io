@@ -1,0 +1,267 @@
+body {
+    background-color: #e1e1e1;
+}
+
+.header {
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    width: 1000px;
+}
+
+.header-logo {
+    width: 50%;
+    height: auto;
+    margin-left: -10px;
+    margin-bottom: -10px;
+}
+
+.header-title {
+    font-family: 'Pirata One';
+    font-size: 50px;
+    color: #C44E28;
+
+}
+
+.wrapper {
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 100px;
+    width: 1000px;
+}
+
+button.add-gamer, button.run-add-player, button.sort-players {
+    font-family: 'Pirata One';
+    font-size: 80px;
+    color: #F7F5F3;
+    background-color: #725542;
+    border: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+}
+
+button.run-add-player {
+    position: relative;
+    left: 490px;
+    bottom: 25px;
+}
+
+button.sort-players {
+    margin-left: 30px;
+}
+
+button.close-add-player-alert {
+    float: right;
+    width: 100px;
+    height: 90px;
+    background-color: #725542;
+    color: #F7F5F3;
+    font-family: 'Pirata One';
+    font-size: 80px;
+    line-height: 100px;
+    margin-top: 5px;
+    margin-right: 5px;
+    border: none;
+    padding: 0px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.add-player-alert {
+    width: 900px;
+    height: 400px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #F7F5F3;
+    display: none;
+}
+
+.add-player-alert-header {
+    width: 100%;
+    height: 100px;
+    background-color: #725542;
+    font-family: 'Pirata One';
+    color: #F7F5F3;
+}
+
+.add-player-alert-header span {
+    line-height: 100px;
+    margin-left: 30px;
+    font-size: 70px;
+}
+
+.add-player-alert-body {
+    font-family: 'Crimson Text';
+    background-color: #F7F5F3;
+    height: 100%;
+    margin-top: 0px;
+}
+
+.add-player-alert-body form {
+    margin: 30px;
+    margin-bottom: 50px;
+    font-size: 50px;
+    font-weight: bold;
+    width: 930px;
+}
+
+.add-player-alert-body form input {
+    margin-bottom: 10px;
+    font-size: 70px;
+    line-height: 90px;
+    font-family: 'Pirata One';
+    border: none;
+    background-color: #9A876B;
+    padding-left: 10px;
+    color: #F7F5F3;
+}  
+
+input#playermonster {
+    -ms-transform: scale(4); /* IE */
+  -moz-transform: scale(4); /* FF */
+  -webkit-transform: scale(4); /* Safari and Chrome */
+  -o-transform: scale(4); /* Opera */
+  transform: scale(4);
+  margin-right: 20px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.add-player-alert-body form input#playername {
+    width: 90%;
+}  
+
+.player-table {
+    width: 1000px;
+    margin-top: 20px;
+}
+
+.player-line {
+    width: 1000px;
+    display: inline-block;
+    margin-bottom: 50px;
+}
+
+.player-line div {
+    float: left;
+}
+
+.player-line-order-number {
+    margin-top: 15px;
+    width: 100px;
+    height: 100px;
+    font-family: 'Pirata One';
+    font-size: 80px;
+    line-height: 100px;
+    text-align: center;
+    background-color: #725542;
+    color: #1C140A;
+}
+
+.player-line-name {
+    padding-left: 15px;
+    width: 600px;
+    height: 110px;
+    font-family: 'Pirata One';
+    font-size: 100px;
+    color: #C44E28;
+    border-bottom: 5px solid #725542;
+}
+
+button.delete-player {
+    width: 50px;
+    height: 105px;
+    float: left;
+    margin-top: 10px;
+    font-family: 'Pirata One';
+    font-size: 50px;
+    line-height: 40px;
+    text-align: center;
+    border: none;
+    background-color: transparent;
+    border-bottom: 5px solid #725542;
+    color: #725542;
+}
+
+.player-line-initiative {
+    margin-top: 15px;
+    width: 130px;
+    height: 100px;
+    font-family: 'Pirata One';
+    font-size: 80px;
+    line-height: 100px;
+    text-align: center;
+    background-color: #725542;
+    color: #725542;
+}
+
+.player-line-initiative-input, .player-line-initiative-input:active, .player-line-initiative-input:focus {
+    background-color: transparent;
+    width: 130px;
+    height: 100px;
+    font-family: 'Pirata One';
+    font-size: 80px;
+    line-height: 100px;
+    text-align: center;
+    color: #1C140A;
+    border: none;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.monster-name {
+    color: #730b00;
+}
+
+.default-player1 {
+    color: rgb(97, 166, 201);
+}
+
+.default-player2 {
+    color: rgb(194, 183, 146);
+}
+
+.default-player3 {
+    color: rgb(172, 123, 176);
+}
+
+.default-player4 {
+    color: rgb(106, 123, 153);
+}
+
+.default-player5 {
+    color: rgb(174, 208, 118);
+}
+
+.character-symbol {
+    width: 80px;
+    margin-right: 10px;
+}
+
+
+textarea:hover, 
+textarea:active, 
+textarea:focus, 
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active
+{
+    outline:0px !important;
+    -webkit-appearance: none;
+    box-shadow: none !important;
+}
