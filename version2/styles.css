@@ -185,12 +185,15 @@ input[type=number] {
     font-family: 'Pirata One';
     line-height: 120%;
     font-size: 650%;
-    margin-left: 3%;
+    margin-left: 2%;
     margin-top: -0.5%;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .monster-name {
-    margin-left: 15%;
+    margin-left: 12%;
+    letter-spacing: -5px;
 }
 
 .wrapper {

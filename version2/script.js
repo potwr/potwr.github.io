@@ -30,10 +30,10 @@ function openAddPlayerAlert()
 
 var starterCharacters = [
     ['Ponury', false, 0, 1, 'Kark', 'Adrian'],
-    ["Nilo", false, , 2, 'Druciarz', 'Mateusz'],
-    ["Lilith", false, , 3, 'Tkaczka Zaklęć', 'Marzena'],
-    ["Squick", false, , 4, 'Myślołap', 'Kuba'],
-    ["Cali", false, , 5, 'Szelma', 'Maciek']
+    ["Nilo", false, 0, 2, 'Druciarz', 'Mateusz'],
+    ["Lilith", false, 0, 3, 'Tkaczka Zaklęć', 'Marzena'],
+    ["Squick", false, 0, 4, 'Myślołap', 'Kuba'],
+    ["Cali", false, 0, 5, 'Szelma', 'Maciek']
 ]
 
 function createPlayerTableCode(a)
@@ -154,7 +154,10 @@ function addPlayer()
 function compareByInitiative(a, b) {
     if (a[2] === b[2]) {
         if (a[1] != b[1]) {
-            return a[1]
+            return (a[1] === true) ? 1 : -1;
+        }
+        else if (a[3] != b[3]) {
+            return (a[3] === undefined) ? -1 : 1;
         }
         return 0;
     }
