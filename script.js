@@ -47,7 +47,7 @@ function createPlayerTableCode(a)
 
     if(playerList[a-1][1] == true)
     {
-        playerTableCode = playerTableCode + 'monster.jpeg); background-position: 0% 20%; box-shadow: inset 0 0 0 1000px rgba(115,11,0,0.6); background-size: cover; ';
+        playerTableCode = playerTableCode + 'monster.jpeg); background-position: 0% 20%; background-size: 100%; box-shadow: inset 0 0 0 1000px rgba(115,11,0,0.6); ';
     }
 
     if(playerList[a-1][1] == false && playerList[a-1][3] == undefined)
@@ -57,23 +57,23 @@ function createPlayerTableCode(a)
     
     switch(playerList[a-1][3]) {
         case 1:
-            playerTableCode = playerTableCode + 'background-position: 10% 40%; box-shadow: inset 0 0 0 1000px rgba(97,166,201,0.6);'
+            playerTableCode = playerTableCode + 'background-position: 0% 35%; background-size: 100%; box-shadow: inset 0 0 0 1000px rgba(97,166,201,0.6);'
             break;
 
         case 2:
-            playerTableCode = playerTableCode + 'background-position: 10% 30%; box-shadow: inset 0 0 0 1000px rgba(194,183,146,0.6);'
+            playerTableCode = playerTableCode + 'background-position: 0% 34%; background-size: 100%; box-shadow: inset 0 0 0 1000px rgba(194,183,146,0.6);'
             break;
 
         case 3:
-            playerTableCode = playerTableCode + 'background-position: 10% 30%; box-shadow: inset 0 0 0 1000px rgba(172,123,176,0.6);'
+            playerTableCode = playerTableCode + 'background-position: 40% 28%; background-size: 150%; box-shadow: inset 0 0 0 1000px rgba(172,123,176,0.6);'
             break;
 
         case 4:
-            playerTableCode = playerTableCode + 'background-position: 10% 45%; box-shadow: inset 0 0 0 1000px rgba(106,123,153,0.6);'
+            playerTableCode = playerTableCode + 'background-position: 0% 27%; background-size: 100%; box-shadow: inset 0 0 0 1000px rgba(106,123,153,0.6);'
             break;
 
         case 5:
-            playerTableCode = playerTableCode + 'background-position: 10% 20%; box-shadow: inset 0 0 0 1000px rgba(174,208,118,0.6);'
+            playerTableCode = playerTableCode + 'background-position: 0% 20%; background-size: 100%; box-shadow: inset 0 0 0 1000px rgba(174,208,118,0.5);'
             break;
     }
 
