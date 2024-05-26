@@ -77,7 +77,7 @@ function createPlayerTableCode(a)
             break;
     }
 
-    playerTableCode = playerTableCode + '"><div class="player-line-top-left"><input class="player-line-initiative-input" type="number" min="0" inputmode="numeric" pattern="[0-9]*" value="'+playerList[a-1][2]+'" id="player-line-initiative-input-'+a+'"><div class="player-line-top-titles"><span class="titles-class-name">'+playerList[a-1][4]+'</span>';
+    playerTableCode = playerTableCode + '"><div class="player-line-top-left"><input class="player-line-initiative-input" type="text" min="0" inputmode="numeric" pattern="[0-9]*" value="'+playerList[a-1][2]+'" id="player-line-initiative-input-'+a+'"><div class="player-line-top-titles"><span class="titles-class-name">'+playerList[a-1][4]+'</span>';
     
     if(playerList[a-1][1] != true)
     {
