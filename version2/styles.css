@@ -189,6 +189,10 @@ input[type=number] {
     margin-top: -0.5%;
 }
 
+.monster-name {
+    margin-left: 15%;
+}
+
 .wrapper {
     z-index: 1;
 }
@@ -296,7 +300,7 @@ input[type=number] {
     color: #fff;
 }
 
-.monster-name {
+.monster-name-old {
     color: #730b00;
 }
 
