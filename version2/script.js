@@ -77,14 +77,14 @@ function createPlayerTableCode(a)
             break;
     }
 
-    playerTableCode = playerTableCode + '"><div class="player-line-top-left"><input class="player-line-initiative-input" type="number" value="'+playerList[a-1][2]+'" id="player-line-initiative-input-'+a+'"><div class="player-line-top-titles"><span class="titles-class-name">'+playerList[a-1][4]+'</span>';
+    playerTableCode = playerTableCode + '"><div class="player-line-top-left"><input class="player-line-initiative-input" type="number" min="0" inputmode="numeric" pattern="[0-9]*" value="'+playerList[a-1][2]+'" id="player-line-initiative-input-'+a+'"><div class="player-line-top-titles"><span class="titles-class-name">'+playerList[a-1][4]+'</span>';
     
     if(playerList[a-1][1] != true)
     {
         playerTableCode = playerTableCode + '<span class="titles-divider">·</span><span class="titles-player-real-name">'+playerList[a-1][5]+'</span>';
     }
     
-    playerTableCode = playerTableCode + '</div></div><div style="width: 10%; float: left; padding-top: 2.5%"><button class="delete-player" onclick="deletePlayer('+(a-1)+')">X</button></div></div><div class="player-line-bottom">';
+    playerTableCode = playerTableCode + '</div></div><div class="player-line-top-right"><button class="delete-player" onclick="deletePlayer('+(a-1)+')">X</button></div></div><div class="player-line-bottom">';
 
     if(playerList[a-1][1] == true || (playerList[a-1][1] == false && playerList[a-1][3] == undefined))
     {
