@@ -80,16 +80,19 @@ body {
 
 .player-line-initiative-input {
     font-family: 'Pirata One';
-    margin-left: 5%;
+    margin-left: 4%;
     display: block;
     float: left;
     text-align: center;
-    font-size: 140px;
-    width: 140px;
-    margin-top: 1%;
+    font-size: 180px;
+    line-height: 200px;
+    width: 160px;
+    height: 200px;
+    margin-top: 0%;
     background: none;
     border: none;
     color: #fff;
+
 }
 
 .player-line-top-titles {
@@ -122,7 +125,9 @@ body {
     font-family: 'Pirata One';
     color: #fff;
     font-size: 700%;
-    margin-left: 30%;
+    margin-left: 0%;
+    width: 150px;
+    height: 150px;
     background: none;
     border: none;
 }
