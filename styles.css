@@ -102,6 +102,7 @@ body {
     color: #fff;
     transform: translateZ(0);
     padding: 0;
+    user-select: all;
 }
 
 .player-line-initiative-input::-webkit-outer-spin-button,
