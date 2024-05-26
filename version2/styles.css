@@ -94,7 +94,6 @@ body {
     color: #fff;
     transform: translateZ(0);
     padding: 0;
-
 }
 
 .player-line-initiative-input::-webkit-outer-spin-button,
@@ -102,6 +101,11 @@ body {
   -webkit-appearance: none;
   margin: 0;
 }
+
+input[type=number] {
+    max-inline-size: none; /* chrome 71 */
+    max-width: unset; min-width: unset; /* iOS12 */
+  }
 
 .player-line-top-titles {
     float: left;
