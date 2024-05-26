@@ -1,0 +1,49 @@
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <title>Gloomhaven Counter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Pirata+One&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <img class="header-logo" src="logo.png"/><br>
+        <span class="header-title">Kolejka inicjatywy</span>
+    </div>    
+
+    <div class="wrapper">
+        <button class="add-gamer" onclick="openAddPlayerAlert()">Dodaj gracza</button><button class="sort-players" onclick="sortPlayers()">Sortuj</button>
+
+        <div class="player-table">
+            
+        </div>
+    </div>
+
+    <div class="add-player-alert">
+        <div class="add-player-alert-header">
+            <span>Dane gracza</span>
+            <button class="close-add-player-alert" onclick="closeAddPlayerAlert()">X</button>
+        </div>
+
+        <div class="add-player-alert-body">
+            <form name="addplayeralert">
+                <label for="playername">Nazwa gracza</label><br>
+                <input type="text" id="playername" name="playername"><br>
+                <input type="checkbox" id="playermonster" name="playermonster" checked>
+                <label for="playermonster">Przeciwnik</label>
+            </form>
+
+             <button class="run-add-player" onclick="addPlayer()">Dodaj gracza</button>   
+        </div>
+    </div>
+</body>
+
+<script>
+    addFirstPlayers();
+</script>
