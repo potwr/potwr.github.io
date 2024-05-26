@@ -239,6 +239,7 @@ body {
     border-radius: 30px;
     margin-left: -20px;
     margin-bottom: 20px;
+    -webkit-appearance: none;
 }
 
 .add-player-alert-body #playermonster {
