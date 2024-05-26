@@ -79,7 +79,7 @@ body {
 }
 
 .player-line-initiative-input {
-    font-family: Arial;
+    font-family: 'Pirata One';
     margin-left: 4%;
     display: block;
     float: left;
@@ -92,7 +92,14 @@ body {
     background: none;
     border: none;
     color: #fff;
+    transform: translateZ(0);
 
+}
+
+.player-line-initiative-input::-webkit-outer-spin-button,
+.player-line-initiative-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .player-line-top-titles {
