@@ -349,7 +349,7 @@ function tidyUpKitchen() {
     currentOrderNumberPrepared += 1;
     currentOrderNumberPreparedPoints = 10;
     currentIngredientPrepared = 0;
-    lengthToDownAnimation = 470;
+    lengthToDownAnimation = 410;
 
     $(".kitchen-points-number").html(currentOrderNumberPreparedPoints);
 
