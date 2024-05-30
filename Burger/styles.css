@@ -149,7 +149,6 @@ body {
     background-color: #f1f1f1;
     float: left;
     font-family: "Courier Prime";
-    text-transform: capitalize;
     padding: 10px;
     font-size: 15px;
     overflow: hidden;
@@ -185,6 +184,11 @@ body {
 
 .order-ingredient {
     margin-left: 5px;
+    display: inline-block;
+}
+
+.order-ingredient:first-letter {
+    text-transform: uppercase;
 }
 
 .order-beverage {
@@ -397,7 +401,7 @@ td:nth-child(3) {
     background-color: red;
 }
 
-.ingredient-pickle {
+.ingredient-pickles {
     background-color: greenyellow;
 }
 
