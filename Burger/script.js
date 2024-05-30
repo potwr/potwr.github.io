@@ -7,7 +7,7 @@ var ingredientsList = [
     {name: "tomato", key: "KeyT", penalty: 1}, //5
     {name: "pickles", key: "KeyP", penalty: 1}, //6
     {name: "onion", key: "KeyO", penalty: 1}, //7
-    {name: "buffalo hot sauce", key: "KeyF", penalty: 1}, //8
+    {name: "buffalo hot", key: "KeyF", penalty: 1}, //8
     {name: "beef", key: "KeyG", penalty: 3}, //9
     {name: "chicken", key: "KeyH", penalty: 3}, //10
     {name: "becon", key: "KeyE", penalty: 1}, //11
@@ -309,12 +309,12 @@ var automaticFewerPoints = setInterval(function() {
     
     //ingredients
     for(a = 0; a < ingredientsList.length; a++) {
-        $(".instruction-ingredients table").append("<tr><td>["+ingredientsList[a].key.slice(-1)+"]</td><td>"+ingredientsList[a].name+"</td><td>"+ingredientsList[a].penalty+"</td></tr>");
+        $(".instruction-ingredients table").append("<tr><td>["+ingredientsList[a].key.slice(-1)+"]</td><td>"+ingredientsList[a].name+"</td><td>"+ingredientsList[a].penalty+" pts</td></tr>");
     }
 
     //beverages
     for(a = 0; a < beverageMenu.length; a++) {
-        $(".instruction-beverages table").append("<tr><td>["+beverageMenu[a].key.slice(-1)+"]</td><td>"+beverageMenu[a].name+"</td><td>2</td></tr>");
+        $(".instruction-beverages table").append("<tr><td>["+beverageMenu[a].key.slice(-1)+"]</td><td>"+beverageMenu[a].name+"</td><td>2 pts</td></tr>");
     }
 
  }

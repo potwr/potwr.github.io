@@ -335,13 +335,13 @@ td, th {
     padding-right: 5px;
 }
 
-td:nth-child(2) {
+td:nth-child(2):first-letter {
     text-transform: capitalize;
 }
 
 td:nth-child(3) {
     border: none;
-    text-align: center;
+    text-align: left;
 }
 
 .beverage-coke {
