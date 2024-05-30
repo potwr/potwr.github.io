@@ -1,0 +1,89 @@
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8">
+    <title>Burger Beverage Ltd.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <span class="header-title">Burger Beverage Ltd.</span>
+        <div class="header-points">
+            <span class="header-points-tracker">0</span>
+            <span class="header-points-title">points</span>
+        </div>
+    </div>
+    <div class="local">
+        <div class="orders">
+
+        </div>
+
+        <div class="kitchen">
+
+            <div class="kitchen-points">
+                <div class="kitchen-points-header">
+                    <span class="kitchen-points-number">10</span>
+                    <span class="kitchen-points-title">points</span>
+                </div><br>
+            </div>
+
+            <div class="kitchen-cooking">
+
+            </div>
+
+        </div>
+
+        <div class="instruction">
+            <div class="instruction-header">menu</div>
+            <div class="instruction-scroll">← scroll</div>
+            <div class="instruction-text-block instruction-text-block-1">
+                <h1>Hello, chef!</h1><br>
+                <span>You are a fast-food restaurant chef. Your task is to prepare orders as it's written on the receipts.</span><br>
+                <h1>Rules</h1>
+                <ul>
+                    <li>You prepare orders in order</li>
+                    <li>To add an ingredient, use keyboard keys</li>
+                    <li>Letters are reserved for ingredients, numbers are for beverages</li>
+                    <li>Every 3 seconds you loose 1 point - chop chop</li>
+                    <li>Mistakes costs you points as listed below</li>
+                    <li>Mistakes cannot be undone - go for another ingredient</li>
+                    <li>Deliver the order with <strong>[Enter]</strong></li>
+                    <li><strong>Remember to always start and end a hamburger with a bun!</strong></li>
+                </ul>
+            </div>
+            <div class="instruction-text-block instruction-text-block-2">
+
+                <h1>ingredients</h1><br>
+                <div class="instruction-ingredients">
+                    <table>
+                        <tr>
+                            <th>key</th>
+                            <th>ingredient</th>
+                            <th>penalty</th>
+                        </tr>
+                    </table>
+                </div><br>
+                <h1>beverages</h1><br>
+                <div class="instruction-beverages">
+                    <table>
+                        <tr>
+                            <th>key</th>
+                            <th>beverage</th>
+                            <th>penalty</th>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        createNewOrderSheet();
+        fillInstruction();
+    </script>
+</body>

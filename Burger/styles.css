@@ -1,0 +1,413 @@
+body {
+    background-color: #dcddd6;
+}
+
+.header {
+    margin: auto;
+    width: 790px;
+    height: 40px;
+    background-color: lightcoral;
+    padding-left: 10px;
+    overflow: hidden;
+}
+
+.header-title {
+    margin-top: -8px;
+    display: block;
+    letter-spacing: -2px;
+    word-spacing: 10px;
+    float: left;
+    font-family: Impact;
+    font-size: 55px;
+    line-height: 55px;
+    color: #dcddd6;
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.header-points {
+    float: right;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: bolder;
+    color: #dcddd6;
+    font-size: 60px;
+    line-height: 60px;
+    letter-spacing: -5px;
+    margin-right: 10px;
+    margin-top: -8px;
+}
+
+.header span {
+    padding: 0px;
+}
+
+.local {
+    width: 800px;
+    height: 800px;
+    margin: auto;
+}
+
+.orders {
+    width: 800px;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+}
+
+.kitchen {
+    width: 800px;
+    height: 550px;
+    background-color: #dedede;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.kitchen-cooking {
+    width: 800px;
+    height: 550px;
+    background-color: #dedede;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.kitchen-points {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    text-align: left;
+    z-index: 1;
+}
+
+.kitchen-points-header {
+    background-color: lightcoral;
+    font-family: Arial;
+    font-style: italic;
+    font-weight: bold;
+    padding-left: 5px;
+    padding-right: 15px;
+    color: #dedede;
+    overflow: hidden;
+    letter-spacing: -5px;
+    display: inline-block;
+    font-size: 44px;
+    height: 40px;
+}
+
+.kitchen-points-header span {
+    font-size: 57px;
+    line-height: 30px;
+}
+
+.kitchen-points-penalty {
+    text-align: left;
+    padding: 5px;
+    background-color: lightcoral;
+    color: #dedede;
+    display: inline;
+    margin-top: 10px;
+    font-size: 15px;
+    line-height: 30px;
+    font-style: italic;
+    font-family: Arial;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+.kitchen-points-penalty-amount, .kitchen-points-penalty-pts {
+    font-size: 20px;
+}
+
+.ingredient {
+    position: absolute;
+    left: 250px;
+    top: 0px;
+    width: 280px;
+    height: 20px;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 10px;
+    background-color: #cecece;
+    margin: 0;
+    float: center;
+}
+
+.ingredient-prepared {
+    color: lightgreen;
+}
+
+.order {
+    width: 165px;
+    height: 230px;
+    background-color: #f1f1f1;
+    float: left;
+    font-family: "Courier Prime";
+    text-transform: capitalize;
+    padding: 10px;
+    font-size: 15px;
+    overflow: hidden;
+    position: absolute;
+    right: -185px;
+    color: #313131;
+}
+
+.order-header {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 35px;
+    height: 30px;
+    color: #fff;
+    background-color: #313131;
+    padding-left: 0px;
+    text-align: center;
+}
+
+.order-header-prepared {
+    color: lightgreen;
+}
+
+.order-content {
+    padding-top: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.order-name {
+    font-weight: bold;
+}
+
+.order-ingredient {
+    margin-left: 5px;
+}
+
+.order-beverage {
+    font-weight: bold;
+}
+
+.order-date {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    letter-spacing: -2px;
+    font-size: 13px;
+}
+
+.beverage {
+    width: 130px;
+    height: 300px;
+    font-family: Arial;
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: bold;
+    position: absolute;
+    right: -130px;
+    bottom: 40px;
+}
+
+.beverage-name {
+    display: block;
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    width: 200px;
+    height: 60px;
+    margin: auto;
+    position: absolute;
+    top: 125px;
+    left: -35px;
+}
+
+.instruction {
+    width: 250px;
+    height: 460px;
+    background-color: #f1f1f1;
+    font-family: Arial;
+    position: fixed;
+    left: 0px;
+    top: 100px;
+    overflow: scroll;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.instruction-header {
+    height: 40px;
+    background-color: lightcoral;
+    color: #dcddd6;
+    font-family: Arial;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 80px;
+    line-height: 25px;
+    letter-spacing: -8px;
+    padding-left: 20px;
+    position: fixed;
+    top: 100px;
+    left: 0px;
+    width: 100%;
+}
+
+.instruction-scroll {
+    font-weight: bold;
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    position: fixed;
+    left: 190px;
+    top: 580px;
+    background-color: lightcoral;
+    color: #f1f1f1;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.instruction-text-block {
+    padding: 10px;
+    padding-right: 20px;
+    font-family: Arial;
+    font-size: 13px;
+    text-align: left;
+}
+
+.instruction-text-block h1 {
+    margin: none;
+    padding: none;
+    display: inline;
+    font-size: 20px;
+    font-style: italic;
+    text-transform: lowercase;
+}
+
+.instruction-text-block span {
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.instruction-text-block ul, .instrucion-ingredients ul, .instruction-beverages ul {
+    margin: 0px;
+    padding-left: 20px;
+}
+
+table {
+    font-size: 13px;
+    margin-left: 10px;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+    background-color: lightcoral;
+    color: #f1f1f1;
+    font-style: italic;
+}
+
+tr td:first-child {
+    font-weight: bold;
+    text-align: center;
+}
+
+td, th {
+    border: none;
+    margin: none;
+    padding: none;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+td:nth-child(2) {
+    text-transform: capitalize;
+}
+
+td:nth-child(3) {
+    border: none;
+    text-align: center;
+}
+
+.beverage-coke {
+    background-color: crimson;
+    color: #fff;
+}
+
+.beverage-cokezero {
+    background-color: crimson;
+    color: #000;
+    letter-spacing: -5px;
+    font-size: 50px;
+}
+
+.beverage-fanta {
+    background-color: orange;
+    color: #fff;
+    font-style: italic;
+}
+
+.beverage-sprite {
+    background-color: green;
+    color: #fff;
+    font-style: italic
+}
+
+.ingredient-bun {
+    background-color: orange;
+}
+
+.ingredient-salad {
+    background-color: green;
+}
+
+.ingredient-cheese {
+    background-color: yellow;
+}
+
+.ingredient-jalapeno {
+    background-color: darkgreen;
+}
+
+.ingredient-beef {
+    background-color: brown;
+}
+
+.ingredient-becon {
+    background-color: darkred;
+}
+
+.ingredient-onion {
+    background-color: purple;
+}
+
+.ingredient-tomato {
+    background-color: lightcoral;
+}
+
+.ingredient-mayonnaise {
+    background-color: white;
+}
+
+.ingredient-ketchup {
+    background-color: red;
+}
+
+.ingredient-pickle {
+    background-color: greenyellow;
+}
+
+.ingredient-veggieburger {
+    background-color: maroon;
+}
+
+.ingredient-mustard {
+    background-color: gold;
+}
+
+.ingredient-originalsauce {
+    background-color: lightsalmon;
+}
