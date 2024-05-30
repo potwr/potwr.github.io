@@ -128,15 +128,16 @@ body {
     left: 250px;
     top: 0px;
     width: 280px;
-    height: 20px;
+    height: 12px;
     font-family: Arial;
     font-weight: bold;
     font-size: 20px;
-    line-height: 20px;
+    line-height: 12px;
     padding: 10px;
     background-color: #cecece;
     margin: 0;
     float: center;
+    border: 1px solid #000;
 }
 
 .ingredient-prepared {
@@ -174,7 +175,7 @@ body {
 }
 
 .order-content {
-    padding-top: 10px;
+    padding-top: 5px;
     padding-left: 5px;
     padding-right: 5px;
     overflow: hidden;
@@ -196,10 +197,11 @@ body {
     text-transform: uppercase;
 }
 
-.order-beverage {
+.order-beverage, .order-side {
     font-weight: bold;
     display: inline-block;
     margin-top: 5px;
+    word-spacing: -5px;
 }
 
 .order-date {
@@ -219,7 +221,8 @@ body {
     font-weight: bold;
     position: absolute;
     right: -130px;
-    bottom: 40px;
+    bottom: 46px;
+    border: 1px solid #000;
 }
 
 .beverage-name {
@@ -232,6 +235,89 @@ body {
     position: absolute;
     top: 125px;
     left: -35px;
+}
+
+.side {
+    width: 200px;
+    height: 250px;
+    position: relative;
+    left: -200px;
+    top: 258px;
+}
+
+.side-fry {
+    width: 20px;
+    height: 200px;
+    background-color: gold;
+    border: 1px solid #000;
+    float: left;
+    z-index: 0;
+    position: absolute;
+}
+
+.side-fry-small {
+    bottom: 50px;
+}
+
+.side-fry-big {
+    bottom: 100px;
+}
+
+.side-fry1 {
+    transform: rotate(-10deg);
+    left: 30px;
+}
+
+.side-fry2 {
+    transform: rotate(5deg);
+    left: 50px;
+}
+
+.side-fry3 {
+    transform: rotate(15deg);
+    left: 70px;
+}
+
+.side-fry4 {
+    transform: rotate(-20deg);
+    left: 90px;
+}
+
+.side-fry5 {
+    transform: rotate(5deg);
+    left: 110px;
+}
+
+.side-fry6 {
+    transform: rotate(9deg);
+    left: 140px;
+}
+
+.side-bag {
+    width: 150px;
+    background-color: rgb(255, 49, 49);
+    z-index: 1;
+    position: absolute;
+    left: 25px;
+    bottom: 0px;
+    transform: perspective(10px) rotateX(-0.5deg);
+    border: 1px solid #000;
+}
+
+.side-bag-big {
+    height: 200px;
+}
+
+.side-bag-small {
+    height: 150px;
+}
+
+.side-name {
+    display: inline-block;
+    margin-top: 40px;
+    font-family: Arial;
+    color: #fff;
+    font-weight: bold;
 }
 
 .instruction {
@@ -344,6 +430,27 @@ td:nth-child(3) {
     text-align: left;
 }
 
+.instruction-menu-burger-name {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 0px !important;
+    margin-top: 5px;
+    font-size: 12px;
+    line-height: 10px;
+    font-weight: bold;
+    font-style: italic;
+    border-bottom: 1px dotted #000;
+}
+
+.instruction-menu-burger-ingredients {
+    font-size: 60px !important;
+    font-style: italic !important;
+    font-family: Georgia !important;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+
 .beverage-coke {
     background-color: crimson;
     color: #fff;
@@ -357,7 +464,7 @@ td:nth-child(3) {
 }
 
 .beverage-fanta {
-    background-color: orange;
+    background-color: darkorange;
     color: #fff;
     font-style: italic;
 }
@@ -366,6 +473,32 @@ td:nth-child(3) {
     background-color: green;
     color: #fff;
     font-style: italic
+}
+
+.beverage-orangejuice {
+    background-color: orange;
+    color: #fff;
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.beverage-applejuice {
+    background-color: sandybrown;
+    color: #fff;
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.beverage-orangejuice .beverage-name, .beverage-applejuice .beverage-name {
+    transform: rotate(-70deg);
+}
+
+.beverage-beer {
+    height: 250px;
+    border-top: 25px solid silver;
+    border-bottom: 25px solid silver;
+    background-color: powderblue;
+    color: #fff;
 }
 
 .ingredient-bun {
