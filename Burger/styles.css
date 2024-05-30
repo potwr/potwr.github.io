@@ -546,6 +546,8 @@ td:nth-child(3) {
 
 .ingredient-ketchup {
     background-image: url('ingredients/ketchup.svg');
+    background-position-y: bottom 18px;
+    background-size: 80%;
 }
 
 .ingredient-pickles {
