@@ -448,13 +448,12 @@ var automaticFewerPoints = setInterval(function() {
 
     //menu
     for(a = 0; a < burgerMenu.length; a++) {
-        $(".instruction-menu").append('<span class="instruction-menu-burger-name">'+burgerMenu[a].name+'</span><span class="instruction-menu-burger-ingredients">');
+        $(".instruction-menu").append('<span class="instruction-menu-burger-name">'+burgerMenu[a].name+'</span><span class="instruction-menu-burger-ingredients instruction-menu-burger-ingredients-'+a+'"></span>');
         for(b = 0; b < burgerMenu[a].ingredients.length; b++) {
-            $(".instruction-menu").append(burgerMenu[a].ingredients[b].name);
+            $(".instruction-menu-burger-ingredients-"+a).append(burgerMenu[a].ingredients[b].name);
             if(b != (burgerMenu[a].ingredients.length-1)) {
-                $(".instruction-menu").append(", ");
+                $(".instruction-menu-burger-ingredients-"+a).append(", ");
             }
         }
-        $(".instruction-menu").append("</span>");
     }
  }

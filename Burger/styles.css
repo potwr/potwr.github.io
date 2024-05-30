@@ -369,7 +369,7 @@ body {
 }
 
 .instruction-text-block {
-    padding: 10px;
+    padding-left: 10px;
     padding-right: 20px;
     font-family: Arial;
     font-size: 13px;
@@ -377,16 +377,17 @@ body {
 }
 
 .instruction-text-block h1 {
-    margin: none;
-    padding: none;
-    display: inline;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
     font-size: 20px;
     font-style: italic;
     text-transform: lowercase;
+    margin-top: 8px;
 }
 
 .instruction-text-block span {
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     display: inline-block;
 }
 
@@ -443,12 +444,14 @@ td:nth-child(3) {
 }
 
 .instruction-menu-burger-ingredients {
-    font-size: 60px !important;
-    font-style: italic !important;
-    font-family: Georgia !important;
+    display: inline;
+    font-size: 10px;
+    font-style: italic;
+    font-family: Georgia;
     padding: 0;
     margin: 0;
-    display: inline-block;
+    margin-bottom: 0px !important;
+    text-align: left;
 }
 
 .beverage-coke {
