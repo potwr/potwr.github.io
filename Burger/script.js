@@ -289,13 +289,13 @@ function fewerPointsForOrder(amount, reason) {
     }
 }
 
-var automaticNewOrderInterval = 5000;
+var automaticNewOrderInterval = 7000;
 
 var automaticNewOrder = setInterval(function() {
     isThereSpaceToCreateOrder();
  }, automaticNewOrderInterval);
 
-var automaticFewerPointsInterval = 12000;
+var automaticFewerPointsInterval = 3000;
 
 var automaticFewerPoints = setInterval(function() {
     fewerPointsForOrder(1);
