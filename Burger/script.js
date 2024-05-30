@@ -7,7 +7,7 @@ var ingredientsList = [
     {name: "tomato", key: "KeyT", penalty: 1}, //5
     {name: "pickles", key: "KeyP", penalty: 1}, //6
     {name: "onion", key: "KeyO", penalty: 1}, //7
-    {name: "jalapeno", key: "KeyJ", penalty: 1}, //8
+    {name: "buffalo hot sauce", key: "KeyF", penalty: 1}, //8
     {name: "beef", key: "KeyG", penalty: 3}, //9
     {name: "chicken", key: "KeyH", penalty: 3}, //10
     {name: "becon", key: "KeyE", penalty: 1}, //11
@@ -34,6 +34,10 @@ var burgerMenu = [
     {name: "Double Cheeseburger", ingredients: [ingredientsList[14], ingredientsList[2], ingredientsList[9], ingredientsList[0], ingredientsList[9], ingredientsList[0]]},
     {name: "Chicken Burger Jr", ingredients: [ingredientsList[4], ingredientsList[2], ingredientsList[10]]},
     {name: "Veggie Burger", ingredients: [ingredientsList[4], ingredientsList[6], ingredientsList[2], ingredientsList[7], ingredientsList[5], ingredientsList[12], ingredientsList[3]]},
+    {name: "Chicken Sandwich", ingredients: [ingredientsList[4], ingredientsList[6], ingredientsList[7], ingredientsList[10]]},
+    {name: "Chicken Buffalo", ingredients: [ingredientsList[4], ingredientsList[2], ingredientsList[6], ingredientsList[7], ingredientsList[10], ingredientsList[8]]},
+    {name: "Big Classic", ingredients: [ingredientsList[14], ingredientsList[2], ingredientsList[0], ingredientsList[9], ingredientsList[1], ingredientsList[14], ingredientsList[6], ingredientsList[7], ingredientsList[9], ingredientsList[0]]},
+    {name: "Big Classic Veggie", ingredients: [ingredientsList[14], ingredientsList[2], ingredientsList[0], ingredientsList[12], ingredientsList[1], ingredientsList[14], ingredientsList[6], ingredientsList[7], ingredientsList[12], ingredientsList[0]]},
 ];
 //{name: , ingredients: []},
 // ingredientsList[], 

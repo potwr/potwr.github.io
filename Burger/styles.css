@@ -151,6 +151,7 @@ body {
     font-family: "Courier Prime";
     padding: 10px;
     font-size: 15px;
+    line-height: 13px;
     overflow: hidden;
     position: absolute;
     right: -185px;
@@ -176,10 +177,14 @@ body {
     padding-top: 10px;
     padding-left: 5px;
     padding-right: 5px;
+    overflow: hidden;
 }
 
 .order-name {
     font-weight: bold;
+    word-spacing: -6px;
+    letter-spacing: -1px;
+    white-space: nowrap;
 }
 
 .order-ingredient {
@@ -193,6 +198,8 @@ body {
 
 .order-beverage {
     font-weight: bold;
+    display: inline-block;
+    margin-top: 5px;
 }
 
 .order-date {
