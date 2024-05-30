@@ -573,3 +573,9 @@ td:nth-child(3) {
 .ingredient-chicken {
     background-image: url('ingredients/chicken.svg');
 }
+
+.ingredient-buffalohot {
+    background-image: url('ingredients/buffalohot.svg');
+    background-position-y: bottom 18px;
+    background-size: 80%;
+}
