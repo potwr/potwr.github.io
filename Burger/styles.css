@@ -123,23 +123,6 @@ body {
     font-size: 20px;
 }
 
-.ingredient {
-    position: absolute;
-    left: 250px;
-    top: 0px;
-    width: 280px;
-    height: 12px;
-    font-family: Arial;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 12px;
-    padding: 10px;
-    background-color: #cecece;
-    margin: 0;
-    float: center;
-    border: 1px solid #000;
-}
-
 .ingredient-prepared {
     color: lightgreen;
 }
@@ -504,58 +487,80 @@ td:nth-child(3) {
     color: #fff;
 }
 
+.ingredient {
+    position: absolute;
+    left: 250px;
+    top: 0px;
+    width: 280px;
+    height: 100px;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 12px;
+    margin: 0;
+    float: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+
+}
+
 .ingredient-bun {
-    background-color: orange;
+    background-image: url('ingredients/bun1.svg');
+}
+
+.upper-bun {
+    background-image: url('ingredients/bun2.svg');
 }
 
 .ingredient-salad {
-    background-color: green;
+    background-image: url('ingredients/salad.svg');
 }
 
 .ingredient-cheese {
-    background-color: yellow;
-}
-
-.ingredient-jalapeno {
-    background-color: darkgreen;
+    background-image: url('ingredients/cheese.svg');
 }
 
 .ingredient-beef {
-    background-color: brown;
+    background-image: url('ingredients/beef.svg');
 }
 
 .ingredient-becon {
-    background-color: darkred;
+    background-image: url('ingredients/becon.svg');
 }
 
 .ingredient-onion {
-    background-color: purple;
+    background-image: url('ingredients/onion.svg');
 }
 
 .ingredient-tomato {
-    background-color: lightcoral;
+    background-image: url('ingredients/tomato.svg');
 }
 
 .ingredient-mayonnaise {
-    background-color: white;
+    background-image: url('ingredients/mayonnaise.svg');
 }
 
 .ingredient-ketchup {
-    background-color: red;
+    background-image: url('ingredients/ketchup.svg');
 }
 
 .ingredient-pickles {
-    background-color: greenyellow;
+    background-image: url('ingredients/pickles.svg');
 }
 
 .ingredient-veggieburger {
-    background-color: maroon;
+    background-image: url('ingredients/veggieburger.svg');
 }
 
 .ingredient-mustard {
-    background-color: gold;
+    background-image: url('ingredients/mustard.svg');
 }
 
 .ingredient-originalsauce {
-    background-color: lightsalmon;
+    background-image: url('ingredients/originalsauce.svg');
+}
+
+.ingredient-chicken {
+    background-image: url('ingredients/chicken.svg');
 }

@@ -143,10 +143,7 @@ function isKeyInIngredientsList(e) {
     let a = 0;
     while(a < ingredientsLength) {
         if(e.code === ingredientsList[a].key) {
-            $(".kitchen-cooking").prepend('<div class="ingredient ingredient-'+ingredientsList[a].name.replace(/\s+/g, '')+'" style="z-index: '+currentIngredientPrepared+'"></div>');
-            if(currentIngredientPrepared == orderCompositions[currentOrderNumberPrepared-1].ingredients.length-1) {
-                $(".ingredient:first-child").addClass("upper-bun");
-            }
+            $(".kitchen-cooking").prepend('<div class="ingredient ingredient-'+ingredientsList[a].name.replace(/\s+/g, '')+'"><span>'+ingredientsList[a].name+'</span></div>');
             a = ingredientsLength+1;
             return true;
         }
@@ -359,13 +356,13 @@ function tidyUpKitchen() {
      }, automaticFewerPointsInterval);
 }
 
-var lengthToDownAnimation = 410;
+var lengthToDownAnimation = 470;
 
 document.addEventListener("keydown", function (e) {
     if(currentIngredientPrepared < orderCompositions[currentOrderNumberPrepared-1].ingredients.length) { 
         if(isKeyInIngredientsList(e) == true) {
             $(".ingredient").first().animate({top: "+="+lengthToDownAnimation+"px"}, 100 );
-            lengthToDownAnimation -= 25;
+            lengthToDownAnimation -= (parseInt($(".ingredient").css("height").slice(0, 2)) + parseInt($(".ingredient").css("padding-top").slice(0, 2)) + parseInt($(".ingredient").css("padding-bottom").slice(0, 2)));
             isCurrentIngredientCorrect(e);
         }
     }
