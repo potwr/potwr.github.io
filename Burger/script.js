@@ -321,6 +321,10 @@ function countPoints() {
         fewerPointsForOrder(2, "no beverage");
     }
 
+    if(orderCompositions[currentOrderNumberPrepared-1].sidesOrdered == true && orderCompositions[currentOrderNumberPrepared-1].sidesPrepared == false) {
+        fewerPointsForOrder(2, "no fries");
+    }
+
     if(werePointsCounted == false) {
         currentPoints += currentOrderNumberPreparedPoints;
         $(".header-points-tracker").html(currentPoints);
