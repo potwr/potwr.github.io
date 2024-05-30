@@ -530,7 +530,7 @@ td:nth-child(3) {
 }
 
 .ingredient-onion {
-    background-image: url('ingredients/onion.svg');
+    background-image: url('ingredients/onion2.svg');
 }
 
 .ingredient-tomato {
@@ -539,6 +539,7 @@ td:nth-child(3) {
 
 .ingredient-mayonnaise {
     background-image: url('ingredients/mayonnaise.svg');
+    background-position-y: bottom 18px;
 }
 
 .ingredient-ketchup {
@@ -559,6 +560,7 @@ td:nth-child(3) {
 
 .ingredient-originalsauce {
     background-image: url('ingredients/originalsauce.svg');
+    background-position-y: bottom 18px;
 }
 
 .ingredient-chicken {

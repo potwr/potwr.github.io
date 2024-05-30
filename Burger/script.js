@@ -365,7 +365,7 @@ document.addEventListener("keydown", function (e) {
     if(currentIngredientPrepared < orderCompositions[currentOrderNumberPrepared-1].ingredients.length) { 
         if(isKeyInIngredientsList(e) == true) {
             $(".ingredient").first().animate({top: "+="+lengthToDownAnimation+"px"}, 100 );
-            lengthToDownAnimation -= 25;
+            lengthToDownAnimation -= 20;
             isCurrentIngredientCorrect(e);
         }
     }
