@@ -1,0 +1,282 @@
+body {
+	margin: auto;
+}
+
+body:hover {
+	cursor: default;
+}
+
+::selection {
+	background-color: rgba(0, 0, 0, 0);
+}
+
+.cover {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+#top_1s, .cbalink {
+	opacity: 0.0;
+	z-index: -1;
+	position: absolute;
+	top: -500px;
+	left: 0px;
+}
+
+div:not([class]) {
+	position: absolute;
+	top: -500px;
+}
+
+.narrow-title, .teamoptionname, .upgradename, .headertitle, .team-right {
+	/*font-family: 'Oleo Script Swash Caps';*/
+	font-family: 'Aladin';
+}
+
+.opponent::selection {
+	background: rgba(0, 0, 0, 0);
+	color: #000;
+}
+
+.opponent img::selection {
+	background-color: rgba(0, 0, 0, 0);
+}
+
+.teamoption {
+	position: relative;
+	width: 170px;
+	height: 55px;
+	cursor: pointer;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.teamoption:hover {
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+.teamoptionname, .upgradename {
+	margin-top: 5px;
+	margin-bottom: 0px;
+	font-size: 25px;
+}
+
+.teamoptiondescription {
+	font-size: 13px;
+}
+
+.team-left {
+	float: left;
+	position: absolute;
+	top: 50%;
+	left: 15px;
+	transform: translate(0, -50%);
+}
+
+.team-right {
+	float: right;
+	font-size: 40px;
+	position: absolute;
+	top: 50%;
+	right: 15px;
+	transform: translate(0, -45%);
+}
+
+.narrow-title {
+	margin-top: 10px;
+	margin-bottom: 5px;
+	margin-left: 15px;
+	font-size: 30px;
+}
+
+.column {
+	float: left;
+}
+
+.upgradeoption {
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 5px;
+	padding-bottom: 10px;
+}
+
+.upgradeoption:hover {
+	background-color: rgba(0, 0, 0, 0.2);
+	cursor: pointer;
+}
+
+.upgradedescription, .upgradecost {
+	font-size: 13px;
+}
+
+.wrapper {
+	width: 900px;
+	position: absolute;
+	top: 20px;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+
+.narrow {
+	width: 200px;
+	background-color: #dedede;
+	padding-bottom: 10px;
+}
+
+.main {
+	width: 500px;
+	height: 400px;
+	background-color: #afafaf;
+	text-align: center;
+	position: relative;
+}
+
+.header {
+	width: 470px;
+	padding: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+	height: 30px;
+}
+
+.characterlevel {
+	float: left;
+}
+
+.charactermoney {
+	float: right;
+}
+
+.headertitle {
+	font-size: 25px;
+}
+
+.characterexp-left {
+	float: left;
+	margin-left: 10px;
+}
+
+.characterexp-center {
+	display: inline-block;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+
+.characterexp-right {
+	float: right;
+	margin-right: 10px;
+}
+
+.characterexp {
+	background-color: #fff;
+	height: 12px;
+	position: relative;
+	font-size: 11px;
+}
+
+.characterexptitle {
+	z-index: 2;
+}
+
+.characterexpgained {
+	z-index: 1;
+	background-color: #FFD300;
+	width: 0px;
+	height: inherit;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+
+.characterexpvalues {
+	z-index: 2;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 500px;
+	height: 12px;
+}
+
+.teampower {
+	position: absolute;
+	top: 72px;
+	right: 10px;
+}
+
+.clickpower {
+	position: absolute;
+	top: 72px;
+	left: 10px;
+}
+
+.opponent {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width: 95px;
+	height: 94px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.opponent:hover {
+	cursor: url(sword.cur), pointer;
+}
+
+.opponent img:hover {
+	width: 105px;
+	height: 88px;
+	position: absolute;
+	left: -5px;
+	top: -5px;
+}
+
+.opponent img:active {
+	width: 95px;
+	height: 78px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+
+.hpbar {
+	width: 500px;
+	height: 20px;
+	background-color: #fff;
+	position: absolute;
+	bottom: 0px;
+}
+
+.actualhp {
+	z-index: 0;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: inherit;
+	height: inherit;
+	background-color: red;
+}
+
+.hpvalue {
+	z-index: 1;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: inherit;
+	height: inherit;
+}
+
+.exp-animation, .cash-animation {
+	z-index: 100;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
