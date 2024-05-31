@@ -1,0 +1,665 @@
+body {
+	margin: auto;
+}
+
+input:focus, button:focus {
+outline: none;
+}
+
+#top_1s, .cbalink {
+	opacity: 0.0;
+	z-index: -1;
+	position: absolute;
+	top: -500px;
+	left: 0px;
+}
+
+div:not([class]) {
+	position: absolute;
+	top: -500px;
+}
+
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.alert {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -80%);
+	width: 400px;
+	height: 170px;
+	background-color: #fff;
+	z-index: 1000;
+	display: none;
+}
+
+.alert-header {
+	width: 380px;
+	height: 40px;
+	padding-left: 10px;
+	padding-right: 10px;
+	display: table-cell;
+	vertical-align: middle;
+	background-color: #dedede;
+}
+
+.closealert {
+	float: right;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	
+}
+
+.alert-body {
+	width: 380px;
+	height: 100px;
+	padding: 10px;
+	padding-top: 20px;
+	position: relative;
+}
+
+.acceptalert {
+	width: 70px;
+	height: 25px;
+	position: absolute;
+	right: 90px;
+	bottom: 15px;
+}
+
+.refusealert {
+	width: 70px;
+	height: 25px;
+	position: absolute;
+	right: 10px;
+	bottom: 15px;
+}
+
+.plant-desc, .cell-desc {
+	position: relative;
+	width: 135px;
+	height: 70px;
+	background-color: #000;
+	color: #fff;
+	opacity: 0.85;
+	z-index: 500;
+	display: none;
+	font-size: 10px;
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1em;
+}
+
+.plant-desc-content, .cell-desc-content {
+	width: calc(100% - 15px);
+	position: absolute;
+	top: 50%;
+	left: 10px;
+	transform: translate(0, -50%);
+}
+
+.plant-desc-name, .cell-desc-name {
+	font-weight: bold;
+	font-family: 'Amatic SC', cursive;
+	font-size: 18px;
+	line-height: 1.2em;
+}
+
+.cell-desc-watered {
+	font-weight: bold;
+}
+
+.shop {
+	display: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 700px;
+	height: 500px;
+	background: linear-gradient(rgba(0,0,0,0.0), rgba(0,0,0,0.0)), url("background/shop_bg.jpg");
+	z-index: 10000;
+	color: #fff;
+	font-family: 'Amatic SC', cursive;
+}
+
+.shop-header {
+	width: calc(100% - 20px);
+	padding: 10px;
+	height: 20px;
+	background-image: url("background/shop_bg.jpg");
+	position: relative;
+	margin-bottom: 10px;
+	font-family: 'Amatic SC', cursive;
+	color: #fff;
+}
+
+.shop-title {
+	position: absolute;
+	left: 50%;
+	top: calc(50% + 5px);
+	transform: translate(-50%, -50%);
+	font-size: 30px;
+	font-weight: bold;
+	letter-spacing: 3px;
+}
+
+.close-the-shop {
+	float: right;
+	color: #fff;
+	font-size: 20px;
+	height: 20px;
+	width: 20px;
+	margin-right: 10px;
+}
+
+.shop-wrapper {
+	width: calc(100% - 20px);
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.shop-key {
+	width: 300px;
+	height: 30px;
+	position: relative;
+	background-color: rgba(0,0,0,0.9);
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.shop-key .left {
+	width: 110px;
+	position: absolute;
+	left: 10px;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+
+.shop-key .middle {
+	width: 75px;
+	text-align: center;
+	position: absolute;
+	left: 100px;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+
+.shop-key .right {
+	width: 105px;
+	position: absolute;
+	left: 180px;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+
+.shop-menu {
+	width: 300px;
+	height: 440px;
+	float: left;
+	background-image: url("background/shop_bg.jpg");
+	background-position: -10px -50px;
+}
+
+.shop-menu-items {
+	width: 100%;
+	height: 410px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	background-color: rgba(0,0,0,0.4);
+}
+
+.plant-menu-option {
+	height: 40px;
+	width: 300px;
+	position: relative;
+	font-size: 20px;
+}
+
+.plant-menu-option:hover {
+	background-color: grey;
+}
+
+.plant-menu-option-verse {
+	width: 100px;
+	float: left;
+	position: absolute;
+	left: 10px;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+
+.shop-price {
+	width: 75px;
+	position: absolute;
+	top: 50%;
+	left: 100px;
+	transform: translate(0, -50%);
+	text-align: center;
+}
+
+.amount-to-buy {
+	float: left;
+	width: 100px;
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+
+.shop-amount {
+	width: 40px;
+	height: 23px;
+	padding-left: 10px;
+	border: none;
+	background: none;
+	color: #fff;
+	font-family: 'Amatic SC', cursive;
+	text-align: center;
+	border-bottom: 2px solid #fff;
+	font-size: 20px;
+}
+
+.add-to-cart {
+	width: 60px;
+	float: right;
+	taxt-align: center;
+	color: #fff;
+}
+
+.add-to-cart:hover {
+	letter-spacing: 1px;
+}
+
+.cart {
+	float: left;
+	width: 370px;
+	margin-left: 10px;
+}
+
+.cart .shop-key {
+	width: 100%;
+	height: 30px;
+	position: relative;
+}
+
+.cart .shop-key .middle {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.cart-list {
+	width: 330px;
+	height: 330px;
+	padding: 20px;
+	background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("background/shop_bg.jpg");
+	background-position: -320px -80px;
+	overflow: auto;
+}
+
+.cart-list-item {
+	display: none;
+	height: 40px;
+	font-size: 25px;
+}
+
+.delete-cart-item {
+	color: #fff;
+}
+
+.shop-buy {
+	width: 350px;
+	height: 40px;
+	padding-left: 10px;
+	padding-right: 10px;
+	background-color: rgba(0,0,0,0.9);
+	position: relative;
+}
+
+.shop-buy .left {
+	position: absolute;
+	left: 20px;
+	top: 50%;
+	transform: translate(0, -50%);
+	font-size: 20px;
+}
+
+.shop-buy .right {
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	transform: translate(0, -50%);
+	color: #fff;
+}
+
+.shop-reset, .shop-purchase {
+	color: #fff;
+	width: 50px;
+}
+
+.shop-reset:hover, .shop-purchase:hover {
+	letter-spacing: 2px;
+}
+
+.shop-purchase {
+	float: right;
+}
+
+.header {
+	width: 914px;
+	height: 100px;
+	position: relative;
+	background-position: 0px 0px;
+	background-size: 1100px;
+	color: #fff;
+}
+
+.header-left {
+	float: left;
+	width: 250px;
+	height: 100px;
+	position: relative;
+}
+
+.gametitle {
+	position: absolute;
+	top: 50%;
+	left: 30px;
+	transform: translate(0, -50%);
+	font-family: 'Amatic SC', cursive;
+	font-size: 50px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	color: #fff;
+}
+
+.header-right {
+	float: right;
+	width: 664px;
+	height: 100px;
+	position: relative;
+}
+
+.header-buttons-left button, .header-buttons-right button {
+	color: #fff;
+}
+
+button {
+	background-color: rgba(0, 0, 0, 0);
+	background-image: none;
+	border: none;
+	padding: 0;
+	margin: 0;
+	font-family: 'Amatic SC', cursive;
+	font-size: 20px;
+	font-weight: bold;
+	padding-left: 5px;
+	padding-right: 5px;
+	cursor: pointer;
+}
+
+.header-buttons-left {
+	width: 130px;
+	position: absolute;
+	top: 50%;
+	left: 0px;
+	transform: translate(0, -50%);
+}
+
+.header-buttons-left button {
+	margin-bottom: 2px;
+	font-size: 25px;
+	height: 1em;
+}
+
+.header-buttons-left button:last-of-type {
+	margin-bottom: 0px;
+}
+
+.header-buttons-left button:hover {
+	letter-spacing: 1px;
+}
+
+.header-buttons-right {
+	position: absolute;
+	top: 50%;
+	left: 130px;
+	transform: translate(0, -50%);
+}
+
+.header-buttons-right button {
+	line-height: 1.1em;
+	min-width: 125px;
+	float: left;
+}
+
+.header-buttons-right button:hover {
+	letter-spacing: 1px;
+}
+
+.info {
+	width: 230px;
+	float: left;
+	font-family: 'Amatic SC', cursive;
+	font-weight: bold;
+	font-size: 25px;
+	letter-spacing: 1px;
+	position: absolute;
+	top: 50%;
+	right: 30px;
+	transform: translate(0, -50%);
+	line-height: 1em;
+}
+
+.info-verse a {
+	font-weight: normal;
+}
+
+.wrapper {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 914px;
+	height: 664px
+}
+
+.game {
+	width: 914px;
+}
+
+.field {
+	width: 714px;
+	float: left;
+	background-color: #000;
+	cursor: pointer;
+}
+
+.row {
+	width: 714px;
+	height: 42px;
+}
+
+.cell {
+	width: 41px;
+	height: 41px;
+	margin: 0px;
+	margin-left: 1px;
+	margin-top: 1px;
+	float: left;
+	background-image: url("textures/txtr.png");
+	position: relative;
+	border-radius: 0%;
+	background-size: cover;
+	font-family: 'Amatic SC', cursive;
+	font-size: 25px;
+}
+
+.darkening {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0px;
+	right: 0px;
+}
+
+.darkening:hover {
+	background-color: rgba(0, 0, 0, 0.25);
+}
+
+#planted {
+	background-color: rgba(0, 0, 0, 0.25);
+}
+
+#darkened {
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.cell:hover {
+	cursor: pointer;
+}
+
+#sown {
+	background-color: darkgreen;
+}
+
+.left-menu {
+	width: 200px;
+	height: 504px;
+	background-color: #dedede;
+	float: left;
+	background-size: 1100px;
+	background-position: 0px -100px;
+	color: #fff;
+}
+
+.plant-option {
+	width: calc(100% - 15px);
+	height: 40px;
+	padding-left: 15px;
+	position: relative;
+	font-family: 'Amatic SC', cursive;
+	font-weight: bold;
+	font-size: 25px;
+	letter-spacing: 1px;
+}
+
+.plant-name a {
+	margin-left: 5px;
+}
+
+.left-menu-header {
+	width: 100%;
+	height: 40px;
+}
+
+.left-menu-items {
+	width: 100%;
+	height: 464px;
+	overflow: auto;
+}
+
+.left-menu-header-option {
+	width: 50%;
+	height: 40px;
+	float: left;
+	position: relative;
+}
+
+.plant-option:hover, .left-menu-header-option:hover {
+	background-color: rgba(255, 255, 255, 0.35);
+	cursor: pointer;
+}
+
+.plant-option .plant-name {
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+
+.plant-name {
+	font-family: 'Amatic SC', cursive;
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.left-menu-header-option .plant-name {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.days-left {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+}
+
+#chosen-plant-option {
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.offers {
+	width: 914px;
+	height: 50px;
+	overflow: visible;
+	position: absolute;
+	bottom: 0px;
+}
+
+.client {
+	width: 195px;
+	height: 30px;
+	padding: 10px;
+	background-image: url("textures/client_txtr.jpg");
+	float: left;
+	position: absolute;
+	bottom: 0px;
+	overflow: hidden;
+	transition: height 0.125s;
+}
+
+.client:nth-of-type(1) {
+	left: 2px;
+}
+
+.client:nth-of-type(2) {
+	left: 233px;
+}
+
+.client:nth-of-type(3) {
+	left: 464px;
+}
+
+.client:last-of-type {
+	right: 2px;
+}
+
+.client:hover {
+	height: 280px;
+}
+
+button.offer-refuse {
+	position: absolute;
+	left: 10px;
+	top: 269px;
+}
+
+button.offer-accept {
+	position: absolute;
+	right: 10px;
+	top: 269px;
+}
