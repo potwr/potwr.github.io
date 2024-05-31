@@ -1,0 +1,72 @@
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Aladin" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-menu header-left">
+            <div class="header-counter-height-left">
+            <span class="player-name">Artistide</span>
+            <span class="player-level">Lv. </span><span class="player-level-number">7</span>
+            </div>
+        </div>
+        <div class="header-menu header-logo">
+            <span class="logo-text">Dungeon</span>
+        </div>
+        <div class="header-menu header-right">
+             <div class="header-right-menu">
+                <div class="header-counter-height"><span class="coin-number">100</span></div>
+                <span class="coin-text">Coins</span>
+            </div>
+            <div class="header-right-menu">
+                <div class="header-counter-height"><span class="damage-number your-damage-number">1</span><span class="damage-number-add">per click</span></div>
+                <span class="damage-text">Your damage</span>
+            </div>
+            <div class="header-right-menu">
+                <div class="header-counter-height"><span class="damage-number team-damage-number">0</span><span class="damage-number-add">per sec</span></div>
+                <span class="damage-text">Team damage</span>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="dungeon-container">
+            <svg class="dungeon-wall-top" height="100px" width="700px">
+                <polygon points="0,0 700,0 600,100 100,100"/>
+            </svg>
+            <svg class="dungeon-wall-left" height="700px" width="100px">
+                <polygon points="0,0 100,100 100,600 0,700"/>
+            </svg>
+            <svg class="dungeon-wall-right" height="700px" width="100px">
+                <polygon points="100,0 100,700 0,600 0,100"/>
+            </svg>
+            <svg class="dungeon-wall-bottom" height="100px" width="700px">
+                <polygon points="100,0 600,0 700,100 0,100"/>
+            </svg>
+            <div class="dungeon-door dungeon-door-left">DOOR</div>
+            <div class="dungeon-door dungeon-door-middle">DOOR</div>
+            <div class="dungeon-door dungeon-door-right">DOOR</div>
+            <div class="dungeon-door dungeon-door-back">DOOR</div>
+        </div>
+        <div class="map-container">
+            <div class="legend-left"></div>
+            <div class="map"></div>
+            <div class="legend-bottom"></div>
+        </div>
+
+        <div class="tavern-container">
+            <div class="tavern-title">
+                <span>Tavern</span>
+            </div>
+            <div class="tavern-list">
+            </div>
+        </div>
+    </div>
+</body>
+
+<head>
+<script type="text/javascript" src="script.js"></script>
+</head>
