@@ -392,9 +392,10 @@ th {
     font-style: italic;
 }
 
-tr td:first-child {
+td:first-child {
     font-weight: bold;
     text-align: center;
+    width: 20px;
 }
 
 td, th {
@@ -405,6 +406,10 @@ td, th {
     padding-right: 5px;
 }
 
+td:nth-child(2) {
+    width: 100px;
+}
+
 td:nth-child(2):first-letter {
     text-transform: capitalize;
 }
@@ -412,6 +417,7 @@ td:nth-child(2):first-letter {
 td:nth-child(3) {
     border: none;
     text-align: left;
+    width: 20px;
 }
 
 .instruction-menu-burger-name {
