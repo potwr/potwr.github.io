@@ -73,6 +73,7 @@ var orderCount = 0;
 var currentOrderNumberPrepared = 1;
 var currentOrderNumberPreparedPoints = 10;
 var currentIngredientPrepared = 0;
+var tidyingAnimationOn = false;
 
 var orderCompositions = [];
 
@@ -357,6 +358,8 @@ function tidyUpKitchen() {
 
     $(".kitchen-points-number").html(currentOrderNumberPreparedPoints);
 
+    tidyingAnimationOn = false;
+
     clearInterval(automaticFewerPoints);
     automaticFewerPoints = setInterval(function() {
         fewerPointsForOrder(1);
@@ -389,8 +392,9 @@ document.addEventListener("keydown", function (e) {
         orderCompositions[currentOrderNumberPrepared-1].sidesPrepared = true;
     }
 
-    if(e.code == "Enter") {
+    if(e.code == "Enter" && numberOfCurrentOrders > 0 && tidyingAnimationOn == false) {
         countPoints();
+        tidyingAnimationOn = true;
         setTimeout(function(){
             deleteOrderAnimation();
             tidyUpKitchen();
