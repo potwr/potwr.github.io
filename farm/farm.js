@@ -220,6 +220,8 @@ cell[202]['obstacle'] = 'Pień'
 cell[203]['obstacle'] = 'Kamień'
 cell[204]['obstacle'] = 'Chwast'
 
+createCellsInField();
+
 for(var k = 1; k <= 204; k++)
 {
 	if(cell[k]['obstacle'] == 'Kamień')
@@ -521,6 +523,17 @@ for(var k = 1; k <= 4; k++)
 function randomNumber(min, max)
 {
     return Math.floor(Math.random()*(max-min+1)+min);
+}
+
+function createCellsInField() {
+	let number = 1;
+	for(i = 1; i <= 12; i++) {
+		$(".field").append('<div class="row row-'+i+'"></div>');
+		for(k = 1; k <= 17; k++) {
+			$(".row-"+i).append('<div class="cell" id="cellnumber'+number+'" data-cellnumber="'+number+'"><div class="darkening" id="light"><a class="days-left"></a></div></div>');
+			number++;
+		}
+	}
 }
 
 function displayInteger(value)
