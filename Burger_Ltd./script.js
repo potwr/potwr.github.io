@@ -262,64 +262,6 @@ function isCurrentIngredientCorrect(e) {
 
 }
 
-function isCurrentIngredientCorrectOld(e) {
-    let currentIngredient = orderCompositions[currentOrderNumberPrepared-1].ingredients[currentIngredientPrepared];
-    if(orderCompositions[currentOrderNumberPrepared-1].ingredientsPrepared == false) {
-        if(e.code !== currentIngredient.key && orderCompositions[currentOrderNumberPrepared-1].beveragesOrdered == true && orderCompositions[currentOrderNumberPrepared-1].beveragesPrepared == false) {
-            if(beverageKeysReserved.includes(e.code)) {
-                if(e.code === orderCompositions[currentOrderNumberPrepared-1].beverages[0].key) {
-                    $(".order-"+currentOrderNumberPrepared+" .order-beverage").css("color", "lightgreen");
-                }
-                else {
-                    $(".order-"+currentOrderNumberPrepared+" .order-beverage").css("color", "red");
-                    fewerPointsForOrder(2, 'wrong beverage');
-                }
-            }
-            else {
-                let errorReason = (currentIngredientPrepared == 0) ? "no bun" : "wrong ingredient";
-                $(".order-"+currentOrderNumberPrepared+" .order-ingredient-"+currentIngredientPrepared).css("color", "red");
-                fewerPointsForOrder(currentIngredient.penalty, errorReason);
-                currentIngredientPrepared++;
-            }
-        }
-        else {
-            if(e.code === currentIngredient.key) {
-                if(currentIngredientPrepared > 0 && currentIngredientPrepared+1 < orderCompositions[currentOrderNumberPrepared-1].ingredients.length) {
-                    $(".order-"+currentOrderNumberPrepared+" .order-ingredient-"+currentIngredientPrepared).css("color", "lightgreen");
-                }
-                currentIngredientPrepared++;
-            }
-            else {
-                if(e.code === "Digit1" || e.code === "Digit2" || e.code === "Digit3" || e.code === "Digit4") {
-                    if(orderCompositions[currentOrderNumberPrepared-1].beveragesPrepared == false) {
-                        fewerPointsForOrder(2, "no beverage in the receipt");
-                    }
-                }
-                else {
-                    let errorReason = (currentIngredientPrepared == 0) ? "no bun" : "wrong ingredient";
-                    $(".order-"+currentOrderNumberPrepared+" .order-ingredient-"+currentIngredientPrepared).css("color", "red");
-                    fewerPointsForOrder(currentIngredient.penalty, errorReason);
-                    currentIngredientPrepared++;
-                }
-            }
-        }
-    }
-    else if(orderCompositions[currentOrderNumberPrepared-1].ingredientsPrepared == true && orderCompositions[currentOrderNumberPrepared-1].beveragesPrepared == false) {
-        if(beverageKeysReserved.includes(e.code)) {
-            if(orderCompositions[currentOrderNumberPrepared-1].beveragesOrdered == false) {
-                fewerPointsForOrder(2, "no beverage in the receipt");
-            }
-            else if(e.code === orderCompositions[currentOrderNumberPrepared-1].beverages[0].key) {
-                $(".order-"+currentOrderNumberPrepared+" .order-beverage").css("color", "lightgreen");
-            }
-            else {
-                $(".order-"+currentOrderNumberPrepared+" .order-beverage").css("color", "red");
-                fewerPointsForOrder(2, 'wrong beverage');
-            }
-        }
-    }
-}
-
 function countPoints() {
     if(orderCompositions[currentOrderNumberPrepared-1].ingredientsPrepared == false) {
         fewerPointsForOrder(10, "order not completed");
