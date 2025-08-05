@@ -15,7 +15,7 @@ var ingredientsList = [
     {name: "buffalo hot", key: "KeyF", penalty: 1}, //8
     {name: "beef", key: "KeyG", penalty: 3}, //9
     {name: "chicken", key: "KeyH", penalty: 3}, //10
-    {name: "bacon", key: "KeyE", penalty: 1}, //11
+    {name: "bacon", key: "KeyA", penalty: 1}, //11
     {name: "veggie burger", key: "KeyV", penalty: 3}, //12
     {name: "mustard", key: "KeyU", penalty: 1}, //13
     {name: "original sauce", key: "KeyR", penalty: 1}, //14
