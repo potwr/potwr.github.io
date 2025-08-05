@@ -10,7 +10,9 @@ export async function fillScoreboard() {
     let { data: scoreboard, error } = await supabase
     .from('scoreboard')
     .select('*')
-    .order('score', { ascending: false });
+    .order('score', { ascending: false })
+    .order('created_at', { ascending: true })
+    .limit(99);
     let scoreboardLength = scoreboard.length;
 
     for (let i = 0; i < scoreboardLength; i++) {
