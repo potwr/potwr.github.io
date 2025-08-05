@@ -455,7 +455,7 @@ function fewerPointsForOrder(amount, reason) {
     }
 }
 
-var automaticNewOrderInterval = 7000;
+var automaticNewOrderInterval = 6000;
 
 var automaticNewOrder = setInterval(function() {
     if(gameIsOn == true) {
