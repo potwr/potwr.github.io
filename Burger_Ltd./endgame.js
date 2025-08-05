@@ -58,3 +58,6 @@ export async function submitEndgameFormular() {
 }
 
 $('.endgame-submit').on('click', function(){submitEndgameFormular()});
+$('.endgame-again').on('click', function() {
+  location.reload();
+});

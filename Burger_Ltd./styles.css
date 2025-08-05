@@ -70,13 +70,13 @@ body {
     height: 550px;
     background-color: #dedede;
     text-align: center;
-    position: relative;
+    position: absolute;
     overflow: hidden;
     z-index: 0;
 }
 
 .kitchen-points {
-    position: relative;
+    position: absolute;
     left: 10px;
     top: 10px;
     text-align: left;
@@ -637,6 +637,54 @@ td:nth-child(3) {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom;
+}
+
+.footer {
+    width: 250px;
+    height: 100px;
+    background-color: #f1f1f1;
+    font-family: Arial;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    border-radius: 0px 10px 0px 0px;
+    z-index: 49;
+    overflow: hidden;
+}
+
+.footer-header {
+    height: 40px;
+    background-color: lightcoral;
+    color: #dcddd6;
+    font-family: Arial;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 70px;
+    line-height: 35px;
+    letter-spacing: -8px;
+    padding-left: 20px;
+    text-align: left;
+    overflow: hidden;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+}
+
+.footer-content {
+    width: translate(100%-20px);
+    text-align: left;
+    color: #313131;
+    padding: 10px;
+}
+
+.footer-content-author {
+    font-weight: bold;
+    font-size: 20px;
+    font-style: default;
+    letter-spacing: -2px;
+    margin-bottom: 10px;
+    display: inline-block;
 }
 
 .site-obscure {
