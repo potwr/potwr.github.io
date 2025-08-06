@@ -404,9 +404,6 @@ var automaticNewOrder = setInterval(function() {
     if(gameIsOn == true) {
         isThereSpaceToCreateOrder();
     }
-    else {
-        clearInterval(automaticNewOrder);
-    }
  }, automaticNewOrderInterval);
 
 var automaticFewerPointsInterval = 3000;
