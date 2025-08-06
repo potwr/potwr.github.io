@@ -136,7 +136,7 @@ function createOrder() {
 function createNewOrderSheet() {
     orderCount++;
     let date = new Date();
-    $(".orders").append('<div class="order order-'+(orderCount)+'"><div class="order-header">Order '+("000"+orderCount).slice(-4)+'</div><div class="order-content"></div><div class="order-date">'+date.getDate()+'/'+('0'+(date.getMonth()+1)).slice(-2)+'/'+("00"+date.getFullYear()).slice(-2)+' '+("00"+date.getHours()).slice(-2)+':'+("00"+date.getMinutes()).slice(-2)+'</div></div>');
+    $(".orders").append('<div class="order order-'+(orderCount)+'"><div class="order-header">Order '+("000"+orderCount).slice(-4)+'</div><div class="order-content"></div><div class="order-date">'+date.getDate().toString().padStart(2, '0')+'/'+('0'+(date.getMonth()+1)).slice(-2)+'/'+("00"+date.getFullYear()).slice(-2)+' '+("00"+date.getHours()).slice(-2)+':'+("00"+date.getMinutes()).slice(-2)+'</div></div>');
     $(".order-"+orderCount).css("z-index", orderCount*(-1));
 
     if(numberOfCurrentOrders < 4) {
