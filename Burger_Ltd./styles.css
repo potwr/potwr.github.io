@@ -641,7 +641,7 @@ td:nth-child(3) {
 
 .footer {
     width: 250px;
-    height: 100px;
+    height: 140px;
     background-color: #f1f1f1;
     font-family: Arial;
     position: absolute;
@@ -684,6 +684,15 @@ td:nth-child(3) {
     font-style: default;
     letter-spacing: -2px;
     margin-bottom: 10px;
+    display: inline-block;
+}
+
+.footer-content-thanks {
+    font-family: "Courier Prime";
+    letter-spacing: -2px;
+    word-spacing: -3px;;
+    font-weight: default;
+    margin-top: -5px;
     display: inline-block;
 }
 

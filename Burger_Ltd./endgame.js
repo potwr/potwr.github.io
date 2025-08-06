@@ -37,6 +37,18 @@ function changeSubmittedButton() {
   $('.endgame-submit').css('background-color', '#ccc');
 }
 
+$('.endgame-name').on('keydown', function(event) {
+  const allowedRegex = /^[A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻż0-9 ()\u{1F300}-\u{1FAFF}]*$/u;
+  const key = event.key;
+  // Allow control keys (backspace, arrows, etc.)
+  if (
+    key.length === 1 &&
+    !allowedRegex.test(key)
+  ) {
+    $('.engame-input-alert').text("Only letters, digits, spaces, parentheses, and emojis are allowed.");
+  }
+});
+
 export async function submitEndgameFormular() {
   let name = $('.endgame-name').val();
   if (name.length < 3) {
