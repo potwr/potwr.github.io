@@ -1,0 +1,179 @@
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8">
+    <title>Burger Beverage Ltd.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <script type="module" crossorigin="anonymous" src="endgame.js"></script>
+    <script type="module" crossorigin="anonymous" src="scoreboard.js"></script>
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="/Burger/favicon.ico">
+    <link rel="preload" as="image" href="./ingredients/cheese.svg"/>
+    <link rel="preload" as="image" href="./ingredients/bun1.svg"/>
+    <link rel="preload" as="image" href="./ingredients/bun2.svg"/>
+    <link rel="preload" as="image" href="./ingredients/salad.svg"/>
+    <link rel="preload" as="image" href="./ingredients/ketchup.svg"/>
+    <link rel="preload" as="image" href="./ingredients/mayonnaise.svg"/>
+    <link rel="preload" as="image" href="./ingredients/tomato.svg"/>
+    <link rel="preload" as="image" href="./ingredients/pickles.svg"/>
+    <link rel="preload" as="image" href="./ingredients/onion.svg"/>
+    <link rel="preload" as="image" href="./ingredients/buffalohot.svg"/>
+    <link rel="preload" as="image" href="./ingredients/beef.svg"/>
+    <link rel="preload" as="image" href="./ingredients/chicken.svg"/>
+    <link rel="preload" as="image" href="./ingredients/bacon.svg"/>
+    <link rel="preload" as="image" href="./ingredients/veggieburger.svg"/>
+    <link rel="preload" as="image" href="./ingredients/mustard.svg"/>
+    <link rel="preload" as="image" href="./ingredients/originalsauce.svg"/>
+</head>
+
+<body>
+    <div class="header">
+        <span class="header-title">Burger Beverage Ltd.</span>
+        <div class="header-points">
+            <span class="header-points-tracker">0</span>
+            <span class="header-points-title">points</span>
+        </div>
+    </div>
+    <div class="local">
+        <div class="orders">
+
+        </div>
+
+        <div class="kitchen">
+
+            <div class="kitchen-points">
+                <div class="kitchen-points-header">
+                    <span class="kitchen-points-number">10</span>
+                    <span class="kitchen-points-title">points</span>
+                </div><br>
+            </div>
+
+            <div class="kitchen-time">
+                <div class="kitchen-time-header">
+                    <span class="kitchen-time-number">3:00</span>
+                    <span class="kitchen-time-title"></span>
+                </div><br>
+            </div>
+            
+            <div class="kitchen-cooking">
+
+            </div>
+        </div>
+
+        <div class="instruction">
+            <div class="instruction-header">menu</div>
+            <div class="instruction-scroll">← scroll</div>
+            <div class="instruction-text-block instruction-text-block-1">
+                <h1>Hello, chef!</h1>
+                <span>You are a fast-food restaurant <strong style="color: lightcoral">chef</strong>. Your task is to prepare orders as it's written on the receipts.</span>
+                <h1>Rules</h1>
+                <ul>
+                    <li>You prepare orders one by one</li>
+                    <li>To add an ingredient, use keyboard keys</li>
+                    <li>Letters are reserved for ingredients, digits are for beverages (1-4) and sides (9-0)</li>
+                    <li>Every 3 seconds you loose 1 point — chop chop</li>
+                    <li>Mistakes cost you points as listed below</li>
+                    <li>Mistakes cannot be undone — go for next ingredient</li>
+                    <li>Deliver the order with <strong style="color: lightcoral">[Enter]</strong></li>
+                    <li><strong>Remember to always start and end a burger with a bun!</strong></li>
+                    <li>You have 3 minutes, get the biggest score you can!</li>
+                </ul>
+            </div>
+            <div class="instruction-text-block instruction-text-block-2">
+                <h1>ingredients</h1>
+                <div class="instruction-ingredients">
+                    <table>
+                        <tr>
+                            <th>key</th>
+                            <th>ingredient</th>
+                            <th>penalty</th>
+                        </tr>
+                    </table>
+                </div>
+                <h1>beverages</h1>
+                <div class="instruction-beverages">
+                    <table>
+                        <tr>
+                            <th>key</th>
+                            <th>beverage</th>
+                            <th>penalty</th>
+                        </tr>
+                    </table>
+                </div>
+                <h1>sides</h1>
+                <div class="instruction-fries">
+                    <table>
+                        <tr>
+                            <th>key</th>
+                            <th>side</th>
+                            <th>penalty</th>
+                        </tr>
+                    </table>
+                </div>
+                <h1>menu</h1>
+                <div class="instruction-menu">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="scoreboard">
+        <div class="scoreboard-header">hotlist</div>
+        <div class="scoreboard-scroll">← scroll</div>
+        <div class="scoreboard-content"></div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-header">check</div>
+        <div class="footer-content">
+            <span class="footer-content-text">Burger Ltd. version 2.1.0<br>by</span>
+            <span class="footer-content-author">potwr</span>
+            <span class="footer-content-text">2025</span><br>
+            <span class="footer-content-thanks">Made with ❤️<br>and way too many burgers</span>
+        </div>
+    </div>
+
+    <div class="site-obscure"></div>
+
+    <div class="start-alert">
+        <div class="start-alert-header">order up</div>
+        <div class="start-alert-content">
+            <span class="start-alert-content-header">first things first</span><br>
+            <span class="start-alert-content-text">Read the instruction on the left</span><br><br>
+            <span class="start-alert-content-arrow">←</span><br><br>
+            <span class="start-alert-content-header">when you're ready</span><br>
+            <span class="start-alert-content-text">Press</span>
+            <span class="start-alert-content-enter">Enter</span>
+            <span class="start-alert-content-text">to start the game</span>
+        </div>
+    </div>
+
+    <div class="endgame-formular">
+        <div class="endgame-header">game over</div>
+        <div class="endgame-formular-content">
+            <div class="endgame-formular-text">
+                
+                <span class="endgame-text">Your score</span>
+                <span class="endgame-points">0</span>
+
+            </div>
+
+            <div class="endgame-input">
+                <span class="engame-input-alert"></span>
+                <input type="text" id="nick" class="endgame-name" placeholder="enter your name" maxlength="30" pattern="[A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻż0-9 ()\u{1F300}-\u{1FAFF}]*" title="Only Latin letters, digits, spaces, parentheses, and emojis are allowed" oninput="this.value = this.value.replace(/[^A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻż0-9 ()\u{1F300}-\u{1FAFF}]/gu, '').slice(0,30)">
+            </div>
+            <button class="endgame-submit">Submit</button>
+            <button class="endgame-again">Play Again</button>
+        </div>
+
+    </div>
+
+    <script type="module">
+        import { fillScoreboard } from './scoreboard.js';
+        fillInstruction();
+        fillScoreboard();
+    </script>
+</body>

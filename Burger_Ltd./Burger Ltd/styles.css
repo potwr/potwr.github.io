@@ -1,0 +1,1011 @@
+body {
+    background-color: #dcddd6;
+}
+
+.header {
+    margin: auto;
+    width: 790px;
+    height: 40px;
+    background-color: lightcoral;
+    padding-left: 10px;
+    overflow: hidden;
+}
+
+.header-title {
+    margin-top: -8px;
+    display: block;
+    letter-spacing: -2px;
+    word-spacing: 10px;
+    float: left;
+    font-family: Impact;
+    font-size: 55px;
+    line-height: 55px;
+    color: #dcddd6;
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.header-points {
+    float: right;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: bolder;
+    color: #dcddd6;
+    font-size: 60px;
+    line-height: 60px;
+    letter-spacing: -5px;
+    margin-right: 10px;
+    margin-top: -8px;
+}
+
+.header span {
+    padding: 0px;
+}
+
+.local {
+    width: 800px;
+    height: 800px;
+    margin: auto;
+}
+
+.orders {
+    width: 800px;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+}
+
+.kitchen {
+    width: 800px;
+    height: 550px;
+    background-color: #dedede;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.kitchen-cooking {
+    width: 800px;
+    height: 550px;
+    background-color: #dedede;
+    text-align: center;
+    position: absolute;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.kitchen-points {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    text-align: left;
+    z-index: 1;
+    float: left;
+}
+
+.kitchen-points-header {
+    background-color: lightcoral;
+    font-family: Arial;
+    font-style: italic;
+    font-weight: bold;
+    padding-left: 5px;
+    padding-right: 15px;
+    color: #dedede;
+    overflow: hidden;
+    letter-spacing: -5px;
+    display: inline-block;
+    font-size: 44px;
+    height: 40px;
+}
+
+.kitchen-points-header span {
+    font-size: 57px;
+    line-height: 30px;
+}
+
+.kitchen-points-penalty {
+    text-align: left;
+    padding: 5px;
+    background-color: lightcoral;
+    color: #dedede;
+    display: inline;
+    margin-top: 10px;
+    font-size: 15px;
+    line-height: 30px;
+    font-style: italic;
+    font-family: Arial;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+.kitchen-points-penalty-amount, .kitchen-points-penalty-pts {
+    font-size: 20px;
+}
+
+.kitchen-time {
+    position: absolute;
+    left: 680px;
+    top: 10px;
+    text-align: left;
+    z-index: 1;
+    float: left;
+}
+
+.kitchen-time-header {
+    background-color: lightcoral;
+    font-family: Arial;
+    font-style: italic;
+    font-weight: bold;
+    padding-left: 5px;
+    padding-right: 15px;
+    color: #dedede;
+    overflow: hidden;
+    letter-spacing: -5px;
+    display: inline-block;
+    font-size: 44px;
+    height: 40px;
+}
+
+.kitchen-time-header span {
+    font-size: 57px;
+    line-height: 40px;
+}
+
+.ingredient-prepared {
+    color: lightgreen;
+}
+
+.order {
+    width: 165px;
+    height: 230px;
+    background-color: #f1f1f1;
+    float: left;
+    font-family: "Courier Prime";
+    padding: 10px;
+    font-size: 15px;
+    line-height: 13px;
+    overflow: hidden;
+    position: absolute;
+    right: -185px;
+    color: #313131;
+}
+
+.order-header {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 35px;
+    height: 30px;
+    color: #fff;
+    background-color: #313131;
+    padding-left: 0px;
+    text-align: center;
+}
+
+.order-header-prepared {
+    color: lightgreen;
+}
+
+.order-content {
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    overflow: hidden;
+}
+
+.order-name {
+    font-weight: bold;
+    word-spacing: -6px;
+    letter-spacing: -1px;
+    white-space: nowrap;
+}
+
+.order-ingredient {
+    margin-left: 5px;
+    display: inline-block;
+}
+
+.order-ingredient:first-letter {
+    text-transform: uppercase;
+}
+
+.order-beverage, .order-side {
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 5px;
+    word-spacing: -5px;
+}
+
+.order-date {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    letter-spacing: -2px;
+    font-size: 13px;
+}
+
+.beverage {
+    width: 130px;
+    height: 300px;
+    font-family: Arial;
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: bold;
+    position: absolute;
+    right: -130px;
+    bottom: 46px;
+    border: 1px solid #000;
+}
+
+.beverage-name {
+    display: block;
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    width: 200px;
+    height: 60px;
+    margin: auto;
+    position: absolute;
+    top: 125px;
+    left: -35px;
+}
+
+.side {
+    width: 200px;
+    height: 250px;
+    position: relative;
+    left: -200px;
+    top: 258px;
+}
+
+.side-fry {
+    width: 20px;
+    height: 200px;
+    background-color: gold;
+    border: 1px solid #000;
+    float: left;
+    z-index: 0;
+    position: absolute;
+}
+
+.side-fry-small {
+    bottom: 50px;
+}
+
+.side-fry-big {
+    bottom: 100px;
+}
+
+.side-fry1 {
+    transform: rotate(-10deg);
+    left: 30px;
+}
+
+.side-fry2 {
+    transform: rotate(5deg);
+    left: 50px;
+}
+
+.side-fry3 {
+    transform: rotate(15deg);
+    left: 70px;
+}
+
+.side-fry4 {
+    transform: rotate(-20deg);
+    left: 90px;
+}
+
+.side-fry5 {
+    transform: rotate(5deg);
+    left: 110px;
+}
+
+.side-fry6 {
+    transform: rotate(9deg);
+    left: 140px;
+}
+
+.side-bag {
+    width: 150px;
+    background-color: rgb(255, 49, 49);
+    z-index: 1;
+    position: absolute;
+    left: 25px;
+    bottom: 0px;
+    transform: perspective(10px) rotateX(-0.5deg);
+    border: 1px solid #000;
+}
+
+.side-bag-big {
+    height: 200px;
+}
+
+.side-bag-small {
+    height: 150px;
+}
+
+.side-name {
+    display: inline-block;
+    margin-top: 40px;
+    font-family: Arial;
+    color: #fff;
+    font-weight: bold;
+}
+
+.instruction {
+    width: 250px;
+    height: 500px;
+    background-color: #f1f1f1;
+    font-family: Arial;
+    position: fixed;
+    left: 0px;
+    top: 100px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-bottom: 40px;
+    z-index: 50;
+}
+
+.instruction-header {
+    height: 40px;
+    background-color: lightcoral;
+    color: #dcddd6;
+    font-family: Arial;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 70px;
+    line-height: 35px;
+    letter-spacing: -8px;
+    padding-left: 20px;
+    text-align: left;
+    overflow: hidden;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+}
+
+.instruction-scroll {
+    font-weight: bold;
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    position: fixed;
+    left: 190px;
+    top: 580px;
+    background-color: lightcoral;
+    color: #f1f1f1;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.instruction-text-block {
+    padding-left: 10px;
+    padding-right: 20px;
+    font-family: Arial;
+    font-size: 13px;
+    text-align: left;
+}
+
+.instruction-text-block h1 {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    font-size: 20px;
+    font-style: italic;
+    text-transform: lowercase;
+    margin-top: 8px;
+}
+
+.instruction-text-block span {
+    margin-bottom: 0px;
+    display: inline-block;
+}
+
+.instruction-text-block ul, .instrucion-ingredients ul, .instruction-beverages ul {
+    margin: 0px;
+    padding-left: 20px;
+}
+
+.scoreboard {
+    width: 250px;
+    height: 500px;
+    background-color: #f1f1f1;
+    font-family: Arial;
+    position: fixed;
+    right: 0px;
+    top: 100px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding-bottom: 40px;
+    z-index: 48;
+}
+
+.scoreboard-header {
+    height: 40px;
+    background-color: lightcoral;
+    color: #dcddd6;
+    font-family: Arial;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 70px;
+    line-height: 35px;
+    letter-spacing: -8px;
+    padding-left: 10px;
+    overflow: hidden;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+}
+
+.scoreboard-scroll {
+    font-weight: bold;
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    position: fixed;
+    right: -15px;
+    top: 580px;
+    background-color: lightcoral;
+    color: #f1f1f1;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.scoreboard-content {
+    margin: 10px;
+    margin-right: 0px;
+}
+
+.scoreboard-record {
+    width: 240px;
+    height: 33px;
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+
+.scoreboard-record-position {
+    width: 20px;
+    font-size: 20px;
+    letter-spacing: -2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-right: 2px;
+    font-weight: bold;
+    font-style: default;
+    background-color: lightcoral;
+    color: #f1f1f1;
+    float: left;
+    height: 33px;
+    line-height: 33px;
+}
+
+.scoreboard-record-header {
+    width: 200px;
+    height: 27px;
+    white-space: nowrap;
+    margin-bottom: -5px;
+    display: flex;
+    place-items: center;
+    padding-left: 3px;
+}
+
+.scoreboard-record-points {
+    display: inline-block;
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -2px;
+    font-weight: bold;
+    font-style: italic;
+    background-color: none;
+    color: #313131;
+    padding-right: 5px;
+}
+
+.scoreboard-record-date {
+    display: inline-block;
+    font-size: 10px;
+    font-style: italic;
+    color: #313131;
+    padding-left: 4px;
+    margin-top: 0px;
+}
+
+.scoreboard-record-name {
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 15px;
+    padding-bottom: 3px;
+}
+
+table {
+    font-size: 13px;
+    margin-left: 10px;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+    background-color: lightcoral;
+    color: #f1f1f1;
+    font-style: italic;
+}
+
+td:first-child {
+    font-weight: bold;
+    text-align: center;
+    width: 20px;
+}
+
+td, th {
+    border: none;
+    margin: none;
+    padding: none;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+td:nth-child(2) {
+    width: 100px;
+}
+
+td:nth-child(2):first-letter {
+    text-transform: capitalize;
+}
+
+td:nth-child(3) {
+    border: none;
+    text-align: left;
+    width: 20px;
+}
+
+.instruction-menu-burger-name {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 0px !important;
+    margin-top: 5px;
+    font-size: 12px;
+    line-height: 10px;
+    font-weight: bold;
+    font-style: italic;
+    border-bottom: 1px dotted #000;
+}
+
+.instruction-menu-burger-ingredients {
+    display: inline;
+    font-size: 10px;
+    font-style: italic;
+    font-family: Georgia;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 0px !important;
+    text-align: left;
+}
+
+.beverage-coke {
+    background-color: crimson;
+    color: #fff;
+}
+
+.beverage-cokezero {
+    background-color: crimson;
+    color: #000;
+    letter-spacing: -5px;
+    font-size: 50px;
+}
+
+.beverage-fanta {
+    background-color: darkorange;
+    color: #fff;
+    font-style: italic;
+}
+
+.beverage-sprite {
+    background-color: green;
+    color: #fff;
+    font-style: italic
+}
+
+.beverage-orangejuice {
+    background-color: orange;
+    color: #fff;
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.beverage-applejuice {
+    background-color: sandybrown;
+    color: #fff;
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.beverage-orangejuice .beverage-name, .beverage-applejuice .beverage-name {
+    transform: rotate(-70deg);
+}
+
+.beverage-beer {
+    height: 250px;
+    border-top: 25px solid silver;
+    border-bottom: 25px solid silver;
+    background-color: powderblue;
+    color: #fff;
+}
+
+.ingredient {
+    position: absolute;
+    left: 250px;
+    top: 0px;
+    width: 280px;
+    height: 100px;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 12px;
+    margin: 0;
+    float: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.footer {
+    width: 250px;
+    height: 140px;
+    background-color: #f1f1f1;
+    font-family: Arial;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    border-radius: 0px 10px 0px 0px;
+    z-index: 49;
+    overflow: hidden;
+}
+
+.footer-header {
+    height: 40px;
+    background-color: lightcoral;
+    color: #dcddd6;
+    font-family: Arial;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 70px;
+    line-height: 35px;
+    letter-spacing: -8px;
+    padding-left: 20px;
+    text-align: left;
+    overflow: hidden;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+}
+
+.footer-content {
+    width: translate(100%-20px);
+    text-align: left;
+    color: #313131;
+    padding: 10px;
+}
+
+.footer-content-author {
+    font-weight: bold;
+    font-size: 20px;
+    font-style: default;
+    letter-spacing: -2px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.footer-content-thanks {
+    font-family: "Courier Prime";
+    letter-spacing: -2px;
+    word-spacing: -3px;;
+    font-weight: default;
+    margin-top: -5px;
+    display: inline-block;
+}
+
+.site-obscure {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 49;
+    display: block;
+}
+
+.start-alert {
+    width: 350px;
+    height: 300px;
+    background-color: #f1f1f1;
+    font-family: Arial;
+    position: fixed;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 20;
+    text-align: center;
+    display: block;
+    z-index: 50;
+}
+
+.start-alert-header {
+    height: 40px;
+    width: translate(100%+40px);
+    margin: -20px;
+    margin-bottom: 20px;
+    background-color: lightcoral;
+    color: #dcddd6;
+    font-family: Arial;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 70px;
+    line-height: 35px;
+    letter-spacing: -8px;
+    padding-left: 20px;
+    text-align: left;
+    overflow: hidden;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.start-alert-content {
+    width: 100%;
+    text-align: left;
+    color: #313131;
+    padding-top: 20px;
+}
+
+.start-alert-content-header {
+    font-weight: bold;
+    font-size: 25px;
+    font-style: italic;
+    letter-spacing: -2px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    text-align: left;
+    width: 100%;
+    display: inline-block;
+}
+
+.start-alert-content-arrow {
+    width: 20px;
+    height: 20px;
+    background-color: lightcoral;
+    color: #f1f1f1;
+    font-family: Arial;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 17px;
+    letter-spacing: -2px;
+    text-align: center;
+    display: inline-block;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 30px;
+    animation: bounce 2s ease-out 2s infinite;
+}
+
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {transform: translateX(0);}
+	40% {transform: translateX(-30px);}
+	60% {transform: translateX(-15px);}
+}
+
+.start-alert-content-enter {
+    color: #f1f1f1;
+    font-weight: bold;
+    background-color: lightcoral;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.endgame-formular {
+    width: 600px;
+    height: 400px;
+    background-color: #f1f1f1;
+    font-family: Arial;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 20;
+    text-align: center;
+    display: none;
+}
+
+.endgame-header {
+    height: 40px;
+    width: translate(100%+20px);
+    margin: -20px;
+    margin-bottom: 20px;
+    padding-left: 0px;
+    background-color: lightcoral;
+    color: #dcddd6;
+    font-family: Arial;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 70px;
+    line-height: 35px;
+    letter-spacing: -8px;
+    padding-left: 20px;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.endgame-formular-content {
+    width: 100%;
+    text-align: center;
+    color: #313131;
+}
+
+.endgame-formular-text {
+    width: 100%;
+}
+
+.endgame-text {
+    margin-right: 20px;
+    font-weight: bold;
+    font-size: 40px;
+    letter-spacing: -5px;
+    margin-bottom: 10px;
+    line-height: 120px;
+}
+
+.endgame-points {
+    font-weight: bold;
+    font-size: 60px;
+    letter-spacing: -5px;
+}
+
+.endgame-input-alert {
+    color: red !important;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+    height: 20px;
+}
+
+.endgame-name {
+    border: none;
+    border-bottom: 3px solid #313131;
+    background-color: #f1f1f1;
+    text-align: center;
+    font-style: italic;
+    font-size: 40px;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    outline: none;
+}
+
+.endgame-formular-content button {
+    width: 200px;
+    height: 50px;
+    background-color: lightcoral;
+    color: #f1f1f1;
+    font-family: Arial;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: -2px;
+    border: none;
+    margin-top: 20px;
+}
+
+.endgame-formular-content button:hover {
+    background-color: #dcddd6;
+    color: #313131;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.ingredient-bun {
+    background-image: url('ingredients/bun1.svg');
+}
+
+.upper-bun {
+    background-image: url('ingredients/bun2.svg');
+}
+
+.ingredient-lettuce {
+    background-image: url('ingredients/lettuce.svg');
+}
+
+.ingredient-cheese {
+    background-image: url('ingredients/cheese.svg');
+}
+
+.ingredient-beef {
+    background-image: url('ingredients/beef.svg');
+}
+
+.ingredient-bacon {
+    background-image: url('ingredients/bacon.svg');
+}
+
+.ingredient-onion {
+    background-image: url('ingredients/onion.svg');
+    padding-bottom: 10px;
+}
+
+.ingredient-tomato {
+    background-image: url('ingredients/tomato.svg');
+}
+
+.ingredient-mayonnaise {
+    background-image: url('ingredients/mayonnaise.svg');
+    background-position-y: bottom 18px;
+    background-size: 80%;
+}
+
+.ingredient-ketchup {
+    background-image: url('ingredients/ketchup.svg');
+    background-position-y: bottom 18px;
+    background-size: 80%;
+}
+
+.ingredient-pickles {
+    background-image: url('ingredients/pickles.svg');
+}
+
+.ingredient-veggieburger {
+    background-image: url('ingredients/veggieburger.svg');
+}
+
+.ingredient-mustard {
+    background-image: url('ingredients/mustard.svg');
+    background-position-y: bottom 18px;
+    background-size: 80%;
+}
+
+.ingredient-originalsauce {
+    background-image: url('ingredients/originalsauce.svg');
+    background-position-y: bottom 18px;
+    background-size: 80%;
+}
+
+.ingredient-chicken {
+    background-image: url('ingredients/chicken.svg');
+}
+
+.ingredient-buffalohot {
+    background-image: url('ingredients/buffalohot.svg');
+    background-position-y: bottom 18px;
+    background-size: 80%;
+}
+
+.ingredient-jalapeno {
+    background-image: url('ingredients/jalapeno.svg');
+    background-position-y: bottom 18px;
+    background-size: 80%;
+}
+
+.ingredient-salsa {
+    background-image: url('ingredients/salsa.svg');
+    background-position-y: bottom 18px;
+    background-size: 80%;
+}
+
+.ingredient-nachos {
+    background-image: url('ingredients/nachos.svg');
+    background-position-y: bottom 18px;
+    background-size: 80%;
+}
