@@ -4,9 +4,9 @@ import('./endgame.js').then(module => {
 });
 
 var ingredientsList = [
-    {name: "cheese", key: "KeyC", penalty: 1}, //0
-    {name: "bun", key: "KeyB", penalty: 10}, //1
-    {name: "salad", key: "KeyS", penalty: 1}, //2 
+    {name: "bun", key: "Space", penalty: 10}, //0
+    {name: "cheese", key: "KeyC", penalty: 1}, //1
+    {name: "lettuce", key: "KeyL", penalty: 1}, //2 
     {name: "ketchup", key: "KeyK", penalty: 1}, //3
     {name: "mayonnaise", key: "KeyM", penalty: 1}, //4
     {name: "tomato", key: "KeyT", penalty: 1}, //5
@@ -15,10 +15,13 @@ var ingredientsList = [
     {name: "buffalo hot", key: "KeyF", penalty: 1}, //8
     {name: "beef", key: "KeyG", penalty: 3}, //9
     {name: "chicken", key: "KeyH", penalty: 3}, //10
-    {name: "bacon", key: "KeyA", penalty: 1}, //11
+    {name: "bacon", key: "KeyB", penalty: 1}, //11
     {name: "veggie burger", key: "KeyV", penalty: 3}, //12
     {name: "mustard", key: "KeyU", penalty: 1}, //13
     {name: "original sauce", key: "KeyR", penalty: 1}, //14
+    {name: "jalapeno", key: "KeyJ", penalty: 1}, //15
+    {name: "salsa", key: "KeyS", penalty: 2}, //16
+    {name: "nachos", key: "KeyN", penalty: 1} //17
 ];
 
 // {name: , key: , penalty: },
@@ -28,9 +31,9 @@ var beverageMenu = [
     {name: "Coke Zero", key: "Digit2"},
     {name: "Fanta", key: "Digit3"},
     {name: "Sprite", key: "Digit4"},
-//    {name: "Orange Juice", key: "Digit5"},
-//    {name: "Apple Juice", key: "Digit6"},
-//    {name: "Beer", key: "Digit7"}
+   {name: "Orange Juice", key: "Digit5"},
+   {name: "Apple Juice", key: "Digit6"},
+   {name: "Beer", key: "Digit7"}
 ];
 
 var sidesMenu = [
@@ -54,17 +57,22 @@ for(num = 0; num < sidesMenu.length; num++) {
 }
 
 var burgerMenu = [
-    {name: "Frisco", ingredients: [ingredientsList[14], ingredientsList[2], ingredientsList[7], ingredientsList[5], ingredientsList[9], ingredientsList[0], ingredientsList[11]]},
-    {name: "Original", ingredients: [ingredientsList[14], ingredientsList[2], ingredientsList[6], ingredientsList[7], ingredientsList[5], ingredientsList[3], ingredientsList[9], ingredientsList[0]]},
-    {name: "Crispy Chicken", ingredients: [ingredientsList[4], ingredientsList[2], ingredientsList[5], ingredientsList[10], ingredientsList[0], ingredientsList[11]]},
-    {name: "Classic '68", ingredients: [ingredientsList[13], ingredientsList[0], ingredientsList[9], ingredientsList[0], ingredientsList[3], ingredientsList[7], ingredientsList[6], ingredientsList[13]]},
+    {name: "Frisco", ingredients: [ingredientsList[14], ingredientsList[2], ingredientsList[7], ingredientsList[5], ingredientsList[9], ingredientsList[1], ingredientsList[11]]},
+    {name: "Original", ingredients: [ingredientsList[14], ingredientsList[2], ingredientsList[6], ingredientsList[7], ingredientsList[5], ingredientsList[3], ingredientsList[9], ingredientsList[1]]},
+    {name: "Crispy Chicken", ingredients: [ingredientsList[4], ingredientsList[2], ingredientsList[5], ingredientsList[10], ingredientsList[1], ingredientsList[11]]},
+    {name: "Classic '68", ingredients: [ingredientsList[13], ingredientsList[1], ingredientsList[9], ingredientsList[1], ingredientsList[3], ingredientsList[7], ingredientsList[6], ingredientsList[13]]},
     {name: "Hamburger", ingredients: [ingredientsList[14], ingredientsList[2], ingredientsList[9]]},
-    {name: "Cheeseburger", ingredients: [ingredientsList[14], ingredientsList[2], ingredientsList[9], ingredientsList[0]]},
-    {name: "Double Cheeseburger", ingredients: [ingredientsList[14], ingredientsList[2], ingredientsList[9], ingredientsList[0], ingredientsList[9], ingredientsList[0]]},
+    {name: "Cheeseburger", ingredients: [ingredientsList[14], ingredientsList[2], ingredientsList[9], ingredientsList[1]]},
+    {name: "Double Cheeseburger", ingredients: [ingredientsList[14], ingredientsList[2], ingredientsList[9], ingredientsList[1], ingredientsList[9], ingredientsList[1]]},
     {name: "Chicken Burger Jr", ingredients: [ingredientsList[4], ingredientsList[2], ingredientsList[10]]},
     {name: "Veggie Burger", ingredients: [ingredientsList[4], ingredientsList[6], ingredientsList[2], ingredientsList[7], ingredientsList[5], ingredientsList[12], ingredientsList[3]]},
     {name: "Chicken Sandwich", ingredients: [ingredientsList[4], ingredientsList[6], ingredientsList[7], ingredientsList[10]]},
     {name: "Chicken Buffalo", ingredients: [ingredientsList[4], ingredientsList[2], ingredientsList[6], ingredientsList[7], ingredientsList[10], ingredientsList[8]]},
+    {name: "Spicy Burger Beef", ingredients: [ingredientsList[14], ingredientsList[15], ingredientsList[2], ingredientsList[7], ingredientsList[9], ingredientsList[1]]},
+    {name: "Spicy Burger Veggie", ingredients: [ingredientsList[14], ingredientsList[15], ingredientsList[2], ingredientsList[7], ingredientsList[12], ingredientsList[1]]},
+    {name: "Crispy Nacho Beef", ingredients: [ingredientsList[4], ingredientsList[2], ingredientsList[7], ingredientsList[9], ingredientsList[17], ingredientsList[16]]},
+    {name: "Crispy Nacho Veggie", ingredients: [ingredientsList[4], ingredientsList[2], ingredientsList[7], ingredientsList[12], ingredientsList[17], ingredientsList[16]]},
+    {name: "Crispy Nacho Chicken", ingredients: [ingredientsList[4], ingredientsList[2], ingredientsList[7], ingredientsList[10], ingredientsList[17], ingredientsList[16]]},
 ];
 //{name: , ingredients: []},
 // ingredientsList[], 
@@ -97,13 +105,13 @@ function createOrder() {
     
     $(".order-"+orderSlot+" .order-content").append('<span class="order-name">'+burgerMenu[menuNumber].name+'</span><br>');
 
-    orderCompositions.push({orderNumber: orderCount, ingredients: [ingredientsList[1]], beverages: [], sides: [], beveragesOrdered: false, sidesOrdered: false, ingredientsPrepared: false, beveragesPrepared: false, sidesPrepared: false});
+    orderCompositions.push({orderNumber: orderCount, ingredients: [ingredientsList[0]], beverages: [], sides: [], beveragesOrdered: false, sidesOrdered: false, ingredientsPrepared: false, beveragesPrepared: false, sidesPrepared: false});
 
     for(a = 0; a < ingredientsNumber; a++) {
         $(".order-"+orderSlot+" .order-content").append('<span class="order-ingredient order-ingredient-'+(a+1)+'">'+burgerMenu[menuNumber].ingredients[a].name+'</span><br>');
         orderCompositions[orderCount-1].ingredients.push(burgerMenu[menuNumber].ingredients[a]);
     }
-    orderCompositions[orderCount-1].ingredients.push(ingredientsList[1]);
+    orderCompositions[orderCount-1].ingredients.push(ingredientsList[0]);
 
     let isBeverage = randomNumber(10);
     if(isBeverage < 6) {
@@ -411,8 +419,9 @@ var automaticFewerPointsInterval = 3000;
 function fillInstruction() {
     
     //ingredients
-    for(a = 0; a < ingredientsList.length; a++) {
-        $(".instruction-ingredients table").append("<tr><td>["+ingredientsList[a].key.slice(-1)+"]</td><td>"+ingredientsList[a].name+"</td><td>"+ingredientsList[a].penalty+" pts</td></tr>");
+    let sortedIngredientsList = [ingredientsList[0], ...ingredientsList.slice(1).sort((a, b) => a.name.localeCompare(b.name))];
+    for(a = 0; a < sortedIngredientsList.length; a++) {
+        $(".instruction-ingredients table").append(`<tr><td>[${a == 0 ? 'Space' : sortedIngredientsList[a].key.slice(-1)}]</td><td>`+sortedIngredientsList[a].name+"</td><td>"+ingredientsList[a].penalty+" pts</td></tr>");
     }
 
     //beverages

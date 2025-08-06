@@ -925,8 +925,8 @@ td:nth-child(3) {
     background-image: url('ingredients/bun2.svg');
 }
 
-.ingredient-salad {
-    background-image: url('ingredients/salad.svg');
+.ingredient-lettuce {
+    background-image: url('ingredients/lettuce.svg');
 }
 
 .ingredient-cheese {
@@ -988,6 +988,24 @@ td:nth-child(3) {
 
 .ingredient-buffalohot {
     background-image: url('ingredients/buffalohot.svg');
+    background-position-y: bottom 18px;
+    background-size: 80%;
+}
+
+.ingredient-jalapeno {
+    background-image: url('ingredients/jalapeno.svg');
+    background-position-y: bottom 18px;
+    background-size: 80%;
+}
+
+.ingredient-salsa {
+    background-image: url('ingredients/salsa.svg');
+    background-position-y: bottom 18px;
+    background-size: 80%;
+}
+
+.ingredient-nachos {
+    background-image: url('ingredients/nachos.svg');
     background-position-y: bottom 18px;
     background-size: 80%;
 }
