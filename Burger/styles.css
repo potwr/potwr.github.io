@@ -63,7 +63,6 @@ body {
     text-align: center;
     position: relative;
     overflow: hidden;
-
 }
 
 .kitchen-cooking {
@@ -71,7 +70,7 @@ body {
     height: 550px;
     background-color: #dedede;
     text-align: center;
-    position: relative;
+    position: absolute;
     overflow: hidden;
     z-index: 0;
 }
@@ -82,6 +81,7 @@ body {
     top: 10px;
     text-align: left;
     z-index: 1;
+    float: left;
 }
 
 .kitchen-points-header {
@@ -121,6 +121,35 @@ body {
 
 .kitchen-points-penalty-amount, .kitchen-points-penalty-pts {
     font-size: 20px;
+}
+
+.kitchen-time {
+    position: absolute;
+    left: 680px;
+    top: 10px;
+    text-align: left;
+    z-index: 1;
+    float: left;
+}
+
+.kitchen-time-header {
+    background-color: lightcoral;
+    font-family: Arial;
+    font-style: italic;
+    font-weight: bold;
+    padding-left: 5px;
+    padding-right: 15px;
+    color: #dedede;
+    overflow: hidden;
+    letter-spacing: -5px;
+    display: inline-block;
+    font-size: 44px;
+    height: 40px;
+}
+
+.kitchen-time-header span {
+    font-size: 57px;
+    line-height: 40px;
 }
 
 .ingredient-prepared {
@@ -316,6 +345,7 @@ body {
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     padding-bottom: 40px;
+    z-index: 50;
 }
 
 .instruction-header {
@@ -325,10 +355,11 @@ body {
     font-family: Arial;
     font-weight: bold;
     font-style: normal;
-    font-size: 80px;
-    line-height: 25px;
+    font-size: 70px;
+    line-height: 35px;
     letter-spacing: -8px;
     padding-left: 20px;
+    text-align: left;
     overflow: hidden;
     position: sticky;
     top: 0px;
@@ -377,6 +408,104 @@ body {
 .instruction-text-block ul, .instrucion-ingredients ul, .instruction-beverages ul {
     margin: 0px;
     padding-left: 20px;
+}
+
+.scoreboard {
+    width: 250px;
+    height: 500px;
+    background-color: #f1f1f1;
+    font-family: Arial;
+    position: fixed;
+    right: 0px;
+    top: 100px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding-bottom: 40px;
+    z-index: 48;
+}
+
+.scoreboard-header {
+    height: 40px;
+    background-color: lightcoral;
+    color: #dcddd6;
+    font-family: Arial;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 70px;
+    line-height: 35px;
+    letter-spacing: -8px;
+    padding-left: 10px;
+    overflow: hidden;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+}
+
+.scoreboard-scroll {
+    font-weight: bold;
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    position: fixed;
+    right: -15px;
+    top: 580px;
+    background-color: lightcoral;
+    color: #f1f1f1;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.scoreboard-content {
+    margin: 10px;
+}
+
+.scoreboard-record {
+    margin-bottom: 5px;
+}
+
+.scoreboard-record-position {
+    width: 20px;
+    font-size: 20px;
+    letter-spacing: -2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-right: 2px;
+    font-weight: bold;
+    font-style: default;
+    background-color: lightcoral;
+    color: #f1f1f1;
+    float: left;
+    height: 33px;
+    line-height: 33px;
+}
+
+.scoreboard-record-points {
+    display: inline-block;
+    font-size: 20px;
+    letter-spacing: -2px;
+    font-weight: bold;
+    font-style: italic;
+    background-color: none;
+    color: #313131;
+    padding: 2px;
+    padding-right: 2px;
+}
+
+.scoreboard-record-date {
+    display: inline-block;
+    font-size: 10px;
+    font-style: italic;
+    color: #313131;
+    padding-left: 3px;
+    margin-top: -5px;
+}
+
+.scoreboard-record-name {
+    overflow: hidden;
 }
 
 table {
@@ -508,7 +637,267 @@ td:nth-child(3) {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom;
+}
 
+.footer {
+    width: 250px;
+    height: 140px;
+    background-color: #f1f1f1;
+    font-family: Arial;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    border-radius: 0px 10px 0px 0px;
+    z-index: 49;
+    overflow: hidden;
+}
+
+.footer-header {
+    height: 40px;
+    background-color: lightcoral;
+    color: #dcddd6;
+    font-family: Arial;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 70px;
+    line-height: 35px;
+    letter-spacing: -8px;
+    padding-left: 20px;
+    text-align: left;
+    overflow: hidden;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+}
+
+.footer-content {
+    width: translate(100%-20px);
+    text-align: left;
+    color: #313131;
+    padding: 10px;
+}
+
+.footer-content-author {
+    font-weight: bold;
+    font-size: 20px;
+    font-style: default;
+    letter-spacing: -2px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.footer-content-thanks {
+    font-family: "Courier Prime";
+    letter-spacing: -2px;
+    word-spacing: -3px;;
+    font-weight: default;
+    margin-top: -5px;
+    display: inline-block;
+}
+
+.site-obscure {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 49;
+    display: block;
+}
+
+.start-alert {
+    width: 350px;
+    height: 300px;
+    background-color: #f1f1f1;
+    font-family: Arial;
+    position: fixed;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 20;
+    text-align: center;
+    display: block;
+    z-index: 50;
+}
+
+.start-alert-header {
+    height: 40px;
+    width: translate(100%+40px);
+    margin: -20px;
+    margin-bottom: 20px;
+    background-color: lightcoral;
+    color: #dcddd6;
+    font-family: Arial;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 70px;
+    line-height: 35px;
+    letter-spacing: -8px;
+    padding-left: 20px;
+    text-align: left;
+    overflow: hidden;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.start-alert-content {
+    width: 100%;
+    text-align: left;
+    color: #313131;
+    padding-top: 20px;
+}
+
+.start-alert-content-header {
+    font-weight: bold;
+    font-size: 25px;
+    font-style: italic;
+    letter-spacing: -2px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    text-align: left;
+    width: 100%;
+    display: inline-block;
+}
+
+.start-alert-content-arrow {
+    width: 20px;
+    height: 20px;
+    background-color: lightcoral;
+    color: #f1f1f1;
+    font-family: Arial;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 17px;
+    letter-spacing: -2px;
+    text-align: center;
+    display: inline-block;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 30px;
+    animation: bounce 2s ease-out 2s infinite;
+}
+
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {transform: translateX(0);}
+	40% {transform: translateX(-30px);}
+	60% {transform: translateX(-15px);}
+}
+
+.start-alert-content-enter {
+    color: #f1f1f1;
+    font-weight: bold;
+    background-color: lightcoral;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.endgame-formular {
+    width: 600px;
+    height: 400px;
+    background-color: #f1f1f1;
+    font-family: Arial;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 20;
+    text-align: center;
+    display: none;
+}
+
+.endgame-header {
+    height: 40px;
+    width: translate(100%+20px);
+    margin: -20px;
+    margin-bottom: 20px;
+    padding-left: 0px;
+    background-color: lightcoral;
+    color: #dcddd6;
+    font-family: Arial;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 70px;
+    line-height: 35px;
+    letter-spacing: -8px;
+    padding-left: 20px;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.endgame-formular-content {
+    width: 100%;
+    text-align: center;
+    color: #313131;
+}
+
+.endgame-formular-text {
+    width: 100%;
+}
+
+.endgame-text {
+    margin-right: 20px;
+    font-weight: bold;
+    font-size: 40px;
+    letter-spacing: -5px;
+    margin-bottom: 10px;
+    line-height: 120px;
+}
+
+.endgame-points {
+    font-weight: bold;
+    font-size: 60px;
+    letter-spacing: -5px;
+}
+
+.endgame-input-alert {
+    color: red !important;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+    height: 20px;
+}
+
+.endgame-name {
+    border: none;
+    border-bottom: 3px solid #313131;
+    background-color: #f1f1f1;
+    text-align: center;
+    font-style: italic;
+    font-size: 40px;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    outline: none;
+}
+
+.endgame-formular-content button {
+    width: 200px;
+    height: 50px;
+    background-color: lightcoral;
+    color: #f1f1f1;
+    font-family: Arial;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: -2px;
+    border: none;
+    margin-top: 20px;
+}
+
+.endgame-formular-content button:hover {
+    background-color: #dcddd6;
+    color: #313131;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .ingredient-bun {
@@ -531,8 +920,8 @@ td:nth-child(3) {
     background-image: url('ingredients/beef.svg');
 }
 
-.ingredient-becon {
-    background-image: url('ingredients/becon.svg');
+.ingredient-bacon {
+    background-image: url('ingredients/bacon.svg');
 }
 
 .ingredient-onion {
