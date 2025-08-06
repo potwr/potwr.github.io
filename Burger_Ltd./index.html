@@ -129,7 +129,7 @@
     <div class="footer">
         <div class="footer-header">check</div>
         <div class="footer-content">
-            <span class="footer-content-text">Burger Ltd. version 2.0.6<br>by</span>
+            <span class="footer-content-text">Burger Ltd. version 2.0.7<br>by</span>
             <span class="footer-content-author">potwr</span>
             <span class="footer-content-text">2025</span><br>
             <span class="footer-content-thanks">Made with ❤️<br>and way too many burgers</span>
@@ -163,7 +163,7 @@
 
             <div class="endgame-input">
                 <span class="engame-input-alert"></span>
-                <input type="text" id="nick" class="endgame-name" placeholder="enter your name" pattern="[A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻż0-9 ()\u{1F300}-\u{1FAFF}]*" title="Only Latin letters, digits, spaces, parentheses, and emojis are allowed" oninput="this.value = this.value.replace(/[^A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻż0-9 ()\u{1F300}-\u{1FAFF}]/gu, '')">
+                <input type="text" id="nick" class="endgame-name" placeholder="enter your name" maxlength="30" pattern="[A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻż0-9 ()\u{1F300}-\u{1FAFF}]*" title="Only Latin letters, digits, spaces, parentheses, and emojis are allowed" oninput="this.value = this.value.replace(/[^A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻż0-9 ()\u{1F300}-\u{1FAFF}]/gu, '').slice(0,30)">
             </div>
             <button class="endgame-submit">Submit</button>
             <button class="endgame-again">Play Again</button>

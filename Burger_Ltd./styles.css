@@ -461,10 +461,14 @@ body {
 
 .scoreboard-content {
     margin: 10px;
+    margin-right: 0px;
 }
 
 .scoreboard-record {
+    width: 240px;
+    height: 33px;
     margin-bottom: 5px;
+    overflow: hidden;
 }
 
 .scoreboard-record-position {
@@ -483,16 +487,26 @@ body {
     line-height: 33px;
 }
 
+.scoreboard-record-header {
+    width: 200px;
+    height: 27px;
+    white-space: nowrap;
+    margin-bottom: -5px;
+    display: flex;
+    place-items: center;
+    padding-left: 3px;
+}
+
 .scoreboard-record-points {
     display: inline-block;
     font-size: 20px;
+    line-height: 25px;
     letter-spacing: -2px;
     font-weight: bold;
     font-style: italic;
     background-color: none;
     color: #313131;
-    padding: 2px;
-    padding-right: 2px;
+    padding-right: 5px;
 }
 
 .scoreboard-record-date {
@@ -500,12 +514,15 @@ body {
     font-size: 10px;
     font-style: italic;
     color: #313131;
-    padding-left: 3px;
-    margin-top: -5px;
+    padding-left: 4px;
+    margin-top: 0px;
 }
 
 .scoreboard-record-name {
-    overflow: hidden;
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 15px;
+    padding-bottom: 3px;
 }
 
 table {

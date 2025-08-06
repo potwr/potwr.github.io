@@ -19,10 +19,12 @@ export async function fillScoreboard() {
         const position = i < 9 ? `0${i + 1}` : i + 1;
         let date = new Date(scoreboard[i].created_at);
         $('.scoreboard-content').append(`<div class="scoreboard-record">
-            <span class="scoreboard-record-position">${position}</span>
-            <span class="scoreboard-record-points">${scoreboard[i].score}</span>
-            <span class="scoreboard-record-name">${scoreboard[i].nickname}</span><br>
-            <span class="scoreboard-record-date">${date.getDate().toString().padStart(2, '0')+'/'+((date.getMonth()+1).toString().padStart(2, '0'))+'/'+date.toLocaleDateString('en', {year: '2-digit'})+' '+date.getHours().toString().padStart(2, '0')+':'+date.getMinutes().toString().padStart(2, '0')}</span>
+            <div class="scoreboard-record-position">${position}</div>
+            <div class="scoreboard-record-header">
+                <div class="scoreboard-record-points">${scoreboard[i].score}</div>
+                <div class="scoreboard-record-name">${scoreboard[i].nickname}</div>
+            </div>
+            <div class="scoreboard-record-date">${date.getDate().toString().padStart(2, '0')+'/'+((date.getMonth()+1).toString().padStart(2, '0'))+'/'+date.toLocaleDateString('en', {year: '2-digit'})+' '+date.getHours().toString().padStart(2, '0')+':'+date.getMinutes().toString().padStart(2, '0')}</span>
             </div>`);
         }
 }
