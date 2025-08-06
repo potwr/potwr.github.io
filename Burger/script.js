@@ -1,8 +1,3 @@
-let submitEndgameFormular;
-import('./endgame.js').then(module => {
-    submitEndgameFormular = module.submitEndgameFormular;
-});
-
 var ingredientsList = [
     {name: "cheese", key: "KeyC", penalty: 1}, //0
     {name: "bun", key: "KeyB", penalty: 10}, //1
@@ -15,7 +10,7 @@ var ingredientsList = [
     {name: "buffalo hot", key: "KeyF", penalty: 1}, //8
     {name: "beef", key: "KeyG", penalty: 3}, //9
     {name: "chicken", key: "KeyH", penalty: 3}, //10
-    {name: "bacon", key: "KeyA", penalty: 1}, //11
+    {name: "becon", key: "KeyE", penalty: 1}, //11
     {name: "veggie burger", key: "KeyV", penalty: 3}, //12
     {name: "mustard", key: "KeyU", penalty: 1}, //13
     {name: "original sauce", key: "KeyR", penalty: 1}, //14
@@ -65,6 +60,8 @@ var burgerMenu = [
     {name: "Veggie Burger", ingredients: [ingredientsList[4], ingredientsList[6], ingredientsList[2], ingredientsList[7], ingredientsList[5], ingredientsList[12], ingredientsList[3]]},
     {name: "Chicken Sandwich", ingredients: [ingredientsList[4], ingredientsList[6], ingredientsList[7], ingredientsList[10]]},
     {name: "Chicken Buffalo", ingredients: [ingredientsList[4], ingredientsList[2], ingredientsList[6], ingredientsList[7], ingredientsList[10], ingredientsList[8]]},
+    {name: "Big Classic", ingredients: [ingredientsList[14], ingredientsList[2], ingredientsList[0], ingredientsList[9], ingredientsList[1], ingredientsList[14], ingredientsList[6], ingredientsList[7], ingredientsList[9], ingredientsList[0]]},
+    {name: "Big Classic Veggie", ingredients: [ingredientsList[14], ingredientsList[2], ingredientsList[0], ingredientsList[12], ingredientsList[1], ingredientsList[14], ingredientsList[6], ingredientsList[7], ingredientsList[12], ingredientsList[0]]},
 ];
 //{name: , ingredients: []},
 // ingredientsList[], 
@@ -77,10 +74,6 @@ var currentOrderNumberPrepared = 1;
 var currentOrderNumberPreparedPoints = 10;
 var currentIngredientPrepared = 0;
 var tidyingAnimationOn = false;
-let gameIsOn = false;
-let gameWasStarted = false;
-let gameWasEnded = false;
-let automaticFewerPoints;
 
 var orderCompositions = [];
 
@@ -136,9 +129,8 @@ function createOrder() {
 function createNewOrderSheet() {
     orderCount++;
     let date = new Date();
-    $(".orders").append('<div class="order order-'+(orderCount)+'"><div class="order-header">Order '+("000"+orderCount).slice(-4)+'</div><div class="order-content"></div><div class="order-date">'+date.getDate().toString().padStart(2, '0')+'/'+('0'+(date.getMonth()+1)).slice(-2)+'/'+("00"+date.getFullYear()).slice(-2)+' '+("00"+date.getHours()).slice(-2)+':'+("00"+date.getMinutes()).slice(-2)+'</div></div>');
-    $(".order-"+orderCount).css("z-index", orderCount*(-1));
-
+    $(".orders").append('<div class="order order-'+(orderCount)+'"><div class="order-header">Order '+("000"+orderCount).slice(-4)+'</div><div class="order-content"></div><div class="order-date">'+date.getDate()+'/'+('0'+(date.getMonth()+1)).slice(-2)+'/'+("00"+date.getFullYear()).slice(-2)+' '+("00"+date.getHours()).slice(-2)+':'+("00"+date.getMinutes()).slice(-2)+'</div></div>');
+    
     if(numberOfCurrentOrders < 4) {
         $(".order-"+(orderCount)).animate({right: "+="+((185*(4-numberOfCurrentOrders))+(20*(3-numberOfCurrentOrders)))+"px"}, 100)
     }
@@ -263,6 +255,64 @@ function isCurrentIngredientCorrect(e) {
 
 }
 
+function isCurrentIngredientCorrectOld(e) {
+    let currentIngredient = orderCompositions[currentOrderNumberPrepared-1].ingredients[currentIngredientPrepared];
+    if(orderCompositions[currentOrderNumberPrepared-1].ingredientsPrepared == false) {
+        if(e.code !== currentIngredient.key && orderCompositions[currentOrderNumberPrepared-1].beveragesOrdered == true && orderCompositions[currentOrderNumberPrepared-1].beveragesPrepared == false) {
+            if(beverageKeysReserved.includes(e.code)) {
+                if(e.code === orderCompositions[currentOrderNumberPrepared-1].beverages[0].key) {
+                    $(".order-"+currentOrderNumberPrepared+" .order-beverage").css("color", "lightgreen");
+                }
+                else {
+                    $(".order-"+currentOrderNumberPrepared+" .order-beverage").css("color", "red");
+                    fewerPointsForOrder(2, 'wrong beverage');
+                }
+            }
+            else {
+                let errorReason = (currentIngredientPrepared == 0) ? "no bun" : "wrong ingredient";
+                $(".order-"+currentOrderNumberPrepared+" .order-ingredient-"+currentIngredientPrepared).css("color", "red");
+                fewerPointsForOrder(currentIngredient.penalty, errorReason);
+                currentIngredientPrepared++;
+            }
+        }
+        else {
+            if(e.code === currentIngredient.key) {
+                if(currentIngredientPrepared > 0 && currentIngredientPrepared+1 < orderCompositions[currentOrderNumberPrepared-1].ingredients.length) {
+                    $(".order-"+currentOrderNumberPrepared+" .order-ingredient-"+currentIngredientPrepared).css("color", "lightgreen");
+                }
+                currentIngredientPrepared++;
+            }
+            else {
+                if(e.code === "Digit1" || e.code === "Digit2" || e.code === "Digit3" || e.code === "Digit4") {
+                    if(orderCompositions[currentOrderNumberPrepared-1].beveragesPrepared == false) {
+                        fewerPointsForOrder(2, "no beverage in the receipt");
+                    }
+                }
+                else {
+                    let errorReason = (currentIngredientPrepared == 0) ? "no bun" : "wrong ingredient";
+                    $(".order-"+currentOrderNumberPrepared+" .order-ingredient-"+currentIngredientPrepared).css("color", "red");
+                    fewerPointsForOrder(currentIngredient.penalty, errorReason);
+                    currentIngredientPrepared++;
+                }
+            }
+        }
+    }
+    else if(orderCompositions[currentOrderNumberPrepared-1].ingredientsPrepared == true && orderCompositions[currentOrderNumberPrepared-1].beveragesPrepared == false) {
+        if(beverageKeysReserved.includes(e.code)) {
+            if(orderCompositions[currentOrderNumberPrepared-1].beveragesOrdered == false) {
+                fewerPointsForOrder(2, "no beverage in the receipt");
+            }
+            else if(e.code === orderCompositions[currentOrderNumberPrepared-1].beverages[0].key) {
+                $(".order-"+currentOrderNumberPrepared+" .order-beverage").css("color", "lightgreen");
+            }
+            else {
+                $(".order-"+currentOrderNumberPrepared+" .order-beverage").css("color", "red");
+                fewerPointsForOrder(2, 'wrong beverage');
+            }
+        }
+    }
+}
+
 function countPoints() {
     if(orderCompositions[currentOrderNumberPrepared-1].ingredientsPrepared == false) {
         fewerPointsForOrder(10, "order not completed");
@@ -313,62 +363,42 @@ function tidyUpKitchen() {
     clearInterval(automaticFewerPoints);
     automaticFewerPoints = setInterval(function() {
         fewerPointsForOrder(1);
-    }, automaticFewerPointsInterval);
+     }, automaticFewerPointsInterval);
 }
 
 var lengthToDownAnimation = 410;
 
 document.addEventListener("keydown", function (e) {
-    if(gameIsOn == true) {
-        if(currentIngredientPrepared < orderCompositions[currentOrderNumberPrepared-1].ingredients.length) { 
-            if(isKeyInIngredientsList(e) == true) {
-                $(".ingredient").first().animate({top: "+="+lengthToDownAnimation+"px"}, 100 );
-                lengthToDownAnimation -= 20;
-                isCurrentIngredientCorrect(e);
-            }
-        }
-        else {
-            orderCompositions[currentOrderNumberPrepared-1].ingredientsPrepared = true;
-        }
-
-        if(isKeyInBeveragesList(e) == true) {
-        $(".beverage").animate({right: "+=230px"}, 100 );
-        isCurrentIngredientCorrect(e);
-        orderCompositions[currentOrderNumberPrepared-1].beveragesPrepared = true;
-        }
-
-        if(isKeyInSidesList(e) == true) {
-            $(".side").animate({left: "50px"}, 100);
+    if(currentIngredientPrepared < orderCompositions[currentOrderNumberPrepared-1].ingredients.length) { 
+        if(isKeyInIngredientsList(e) == true) {
+            $(".ingredient").first().animate({top: "+="+lengthToDownAnimation+"px"}, 100 );
+            lengthToDownAnimation -= 20;
             isCurrentIngredientCorrect(e);
-            orderCompositions[currentOrderNumberPrepared-1].sidesPrepared = true;
-        }
-
-        if(e.code == "Enter" && numberOfCurrentOrders > 0 && tidyingAnimationOn == false) {
-            countPoints();
-            tidyingAnimationOn = true;
-            setTimeout(function(){
-                deleteOrderAnimation();
-                tidyUpKitchen();
-            }, 500);
         }
     }
-
-    if(gameIsOn == false && gameWasStarted == false && e.code == "Enter") {
-        gameIsOn = true;
-        gameWasStarted = true;
-        createNewOrderSheet();
-
-        clearInterval(automaticFewerPoints);
-        automaticFewerPoints = setInterval(function() {
-            fewerPointsForOrder(1);
-        }, automaticFewerPointsInterval);
-
-        $(".start-alert").css("display", "none");
-        $(".site-obscure").css("display", "none");
+    else {
+        orderCompositions[currentOrderNumberPrepared-1].ingredientsPrepared = true;
     }
 
-    if(gameIsOn == false && gameWasEnded == true && e.code == "Enter") {
-        submitEndgameFormular();
+    if(isKeyInBeveragesList(e) == true) {
+       $(".beverage").animate({right: "+=230px"}, 100 );
+       isCurrentIngredientCorrect(e);
+       orderCompositions[currentOrderNumberPrepared-1].beveragesPrepared = true;
+    }
+
+    if(isKeyInSidesList(e) == true) {
+        $(".side").animate({left: "50px"}, 100);
+        isCurrentIngredientCorrect(e);
+        orderCompositions[currentOrderNumberPrepared-1].sidesPrepared = true;
+    }
+
+    if(e.code == "Enter" && numberOfCurrentOrders > 0 && tidyingAnimationOn == false) {
+        countPoints();
+        tidyingAnimationOn = true;
+        setTimeout(function(){
+            deleteOrderAnimation();
+            tidyUpKitchen();
+        }, 500);
     }
 
 });
@@ -398,20 +428,19 @@ function fewerPointsForOrder(amount, reason) {
     }
 }
 
-var automaticNewOrderInterval = 6000;
+var automaticNewOrderInterval = 7000;
 
 var automaticNewOrder = setInterval(function() {
-    if(gameIsOn == true) {
-        isThereSpaceToCreateOrder();
-    }
-    else {
-        clearInterval(automaticNewOrder);
-    }
+    isThereSpaceToCreateOrder();
  }, automaticNewOrderInterval);
 
 var automaticFewerPointsInterval = 3000;
 
-function fillInstruction() {
+var automaticFewerPoints = setInterval(function() {
+    fewerPointsForOrder(1);
+ }, automaticFewerPointsInterval);
+
+ function fillInstruction() {
     
     //ingredients
     for(a = 0; a < ingredientsList.length; a++) {
