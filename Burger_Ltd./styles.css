@@ -661,7 +661,7 @@ td:nth-child(3) {
     height: 140px;
     background-color: #f1f1f1;
     font-family: Arial;
-    position: absolute;
+    position: fixed;
     left: 0px;
     bottom: 0px;
     border-radius: 0px 10px 0px 0px;
