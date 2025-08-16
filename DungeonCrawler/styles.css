@@ -638,37 +638,37 @@ body {
 
 .skill-item-icon-1 {
     margin-right: 20px;
-    background-image: url("/skills-pics/1.png");
+    background-image: url("skills-pics/1.png");
     background-size: cover;
 }
 
 .skill-item-icon-2 {
     margin-right: 10px;
-    background-image: url("/skills-pics/2.png");
+    background-image: url("skills-pics/2.png");
     background-size: cover;
 }
 
 .skill-item-icon-3 {
     margin-right: 0px;
-    background-image: url("/skills-pics/3.png");
+    background-image: url("skills-pics/3.png");
     background-size: cover;
 }
 
 .skill-item-icon-4 {
     margin-left: 0px;
-    background-image: url("/skills-pics/4.png");
+    background-image: url("skills-pics/4.png");
     background-size: cover;
 }
 
 .skill-item-icon-5 {
     margin-left: 10px;
-    background-image: url("/skills-pics/5.png");
+    background-image: url("skills-pics/5.png");
     background-size: cover;
 }
 
 .skill-item-icon-6 {
     margin-left: 20px;
-    background-image: url("/skills-pics/6.png");
+    background-image: url("skills-pics/6.png");
     background-size: cover;
 }
 
