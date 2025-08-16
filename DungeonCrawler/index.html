@@ -1,0 +1,212 @@
+<head>
+    <title>Dungeon Crawler</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <script src="maps.js"></script>
+    <script src="skills.js"></script>
+    <script src="monsters.js"></script>
+    <script src="levels.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <div class="header">
+        <h1>Dungeon Crawler</h1>
+        <p>Explore the dungeon, defeat monsters, and collect treasures!</p>
+    </div>
+
+    <div class="game">
+        <div class="player-details">
+            <div class="player-details-card player-profile">
+                <div class="player-card-header">Character</div>
+                <div class="player-profile-icon"></div>
+                <div class="player-profile-details">
+                    <div class="player-profile-text">
+                        <span class="player-level player-level-text">Lv.</span>
+                        <span class="player-level player-level-number">1</span>
+                        <span class="player-name">potwr</span>
+                    </div>
+                    <div class="player-profile-bar-title">
+                        <span class="player-bar-title">Health</span><span class="player-bar-value player-health-value">1000/1000</span>
+                    </div>
+                    <div class="player-profile-bar player-profile-health">
+                        <div class="player-profile-health-bar"></div>
+                    </div>
+                    <div class="player-profile-bar-title">
+                        <span class="player-bar-title">Exp</span><span class="player-bar-value player-health-value">0/100</span>
+                    </div>
+                    <div class="player-profile-bar player-profile-exp">
+                        <div class="player-profile-exp-bar"></div>
+                    </div>
+                </div>
+                <div class="player-card-key">P</div>
+            </div>
+            <div class="player-details-card player-account">
+                <div class="player-card-header">Account</div>
+                <div class="player-account-details">
+                    <span class="player-account-value">0</span><span class="player-account-text">Gold</span>
+                </div>
+                <div class="player-card-key">U</div>
+            </div>
+            <div class="player-details-card player-inventory">
+                <div class="player-card-header">Inventory</div>
+                <div class="player-inventory-details">
+                    <span class="player-inventory-value">0</span><span class="player-inventory-text">Items</span>
+                </div>
+                <div class="player-card-key">I</div>
+            </div>
+        </div>
+        <div class="map">
+            
+        </div>
+    </div>
+
+    <div class="site-cover"></div>
+
+    <div class="fight-area">
+        <div class="fight-area-header">Monster attacks!</div>
+        <div class="fight-area-content">
+            <div class="fight-area-runaway">← [Q] Run away!</div>
+
+            <div class="monster-profile">
+                <div class="monster-profile-icon">Co</div>
+                <div class="monster-profile-details">
+                    <div class="monster-profile-text">
+                        <span class="monster-name">Cobra</span>
+                    </div>
+                    <div class="monster-profile-bar monster-profile-health">
+                        <div class="monster-profile-health-value"></div>
+                        <!-- <div class="monster-profile-health-bar-intermediate"></div> -->
+                        <div class="monster-profile-health-bar"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fight-area-logs">
+                <div class="fight-area-logs-obscure"></div>
+            </div>
+
+            <div class="fight-area-monster">
+                <img src="/monsters/cobra.heic">
+            </div>
+
+            <div class="fight-profile">
+                <div class="fight-profile-icon"></div>
+                <div class="fight-profile-details">
+                    <div class="fight-profile-text">
+                        <span class="player-level player-level-text">Lv.</span>
+                        <span class="player-level player-level-number">7</span>
+                        <span class="player-name">potwr</span>
+                    </div>
+                    <div class="fight-profile-bar fight-profile-health">
+                        <div class="fight-profile-health-value"></div>
+                        <div class="fight-profile-health-bar"></div>
+                    </div>
+                    <div class="fight-profile-bar fight-profile-exp">
+                        <div class="fight-profile-exp-value">0/100</div>
+                        <div class="fight-profile-exp-bar"></div>
+                    </div>
+                </div>
+            </div>    
+
+        </div>
+        <div class="fight-area-footer">
+            
+            <div class="fight-area-skills">
+                
+                <div class="fight-area-skills-header">Skills</div>
+                
+                <div class="skills-left-column">
+                    
+                    <div class="skill-item skill-item-1">
+                        <div class="skill-item-icon skill-item-icon-1">
+                            <div class="skill-key">R</div>
+                            <div class="skill-item-icon-obscure skill-item-icon-obscure-1"></div>
+                        </div>
+                        <div class="skill-item-details skill-item-details-1">
+                            <div class="skill-name skill-name-1"></div>
+                            <div class="skill-cooldown skill-cooldown-1"></div>
+                            <div class="skill-description skill-description-1"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item skill-item-2">
+                        <div class="skill-item-icon skill-item-icon-2">
+                            <div class="skill-key">F</div>
+                            <div class="skill-item-icon-obscure skill-item-icon-obscure-2"></div>
+                        </div>
+                        <div class="skill-item-details skill-item-details-2">
+                            <div class="skill-name skill-name-2"></div>
+                            <div class="skill-cooldown skill-cooldown-2"></div>
+                            <div class="skill-description skill-description-2"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item skill-item-3">
+                        <div class="skill-item-icon skill-item-icon-3">
+                            <div class="skill-key">V</div>
+                            <div class="skill-item-icon-obscure skill-item-icon-obscure-3"></div>
+                        </div>
+                        <div class="skill-item-details skill-item-details-3">
+                            <div class="skill-name skill-name-3"></div>
+                            <div class="skill-cooldown skill-cooldown-3"></div>
+                            <div class="skill-description skill-description-3"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="skills-right-column">
+
+                    <div class="skill-item skill-item-4">
+                        <div class="skill-item-icon skill-item-icon-4">
+                            <div class="skill-key">T</div>
+                            <div class="skill-item-icon-obscure skill-item-icon-obscure-4"></div>
+                        </div>
+                        <div class="skill-item-details skill-item-details-4">
+                            <div class="skill-name skill-name-4"></div>
+                            <div class="skill-cooldown skill-cooldown-4"></div>
+                            <div class="skill-description skill-description-4"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item skill-item-5">
+                        <div class="skill-item-icon skill-item-icon-5">
+                            <div class="skill-key">G</div>
+                            <div class="skill-item-icon-obscure skill-item-icon-obscure-5"></div>
+                        </div>
+                        <div class="skill-item-details skill-item-details-5">
+                            <div class="skill-name skill-name-5"></div>
+                            <div class="skill-cooldown skill-cooldown-5"></div>
+                            <div class="skill-description skill-description-5"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item skill-item-6">
+                        <div class="skill-item-icon skill-item-icon-6">
+                            <div class="skill-key">B</div>
+                            <div class="skill-item-icon-obscure skill-item-icon-obscure-6"></div>
+                        </div>
+                        <div class="skill-item-details skill-item-details-6">
+                            <div class="skill-name skill-name-6"></div>
+                            <div class="skill-cooldown skill-cooldown-6"></div>
+                            <div class="skill-description skill-description-6"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="fight-area-inventory">
+                <div class="fight-area-inventory-header">Inventory</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    fillMap();
+    refreshPositionOnMap();
+    fillSkills();
+</script>

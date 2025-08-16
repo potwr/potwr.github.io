@@ -1,0 +1,713 @@
+body {
+    margin: auto;
+    background-color: #e6e6e6;
+    font-family: Arial;
+}
+
+.header {
+    width: 100%;
+    height: 85px;
+    background-color: #1c1c1c;
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+}
+
+.header h1 {
+    color: #fff;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 0px;
+    margin: 0px;
+}
+
+.header p {
+    color: #ccc;
+    text-align: center;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+
+.game {
+    position: absolute;
+    width: 720px;
+    top: 95px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.map {
+    width: 630px;
+    height: 630px;
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.map-row {
+    width: 100%;
+    height: 70px;
+}
+
+.map-cell {
+    width: 70px;
+    height: 70px;
+    float: left;
+}
+
+.map-cell-horizontal-row {
+    height: 5px;
+    width: 70px
+}
+
+.map-cell-horizontal-space {
+    width: 30px;
+    height: 5px;
+    float: left;
+}
+
+.map-cell-horizontal-door {
+    width: 10px;
+    height: 5px;
+    float: left;
+}
+
+.map-cell-door-open {
+    background-color: red;
+}
+
+.map-cell-middle-row {
+    height: 60px;
+    width: 100%;
+}
+
+.map-cell-collumn {
+    float: left;
+}
+
+.map-cell-vertical-space {
+    width: 5px;
+    height: 25px;
+}
+
+.map-cell-vertical-door {
+    width: 5px;
+    height: 10px;
+}
+
+.map-cell-body {
+    float: left;
+    width: 60px;
+    height: 60px;
+}
+
+.map-cell-body-used {
+    background-color: red;
+}
+
+.map-cell-active {
+    background-color: green;
+}
+
+.player-details {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.player-details-card {
+    width: 215px;
+    height: 80px;
+    border: 0px solid #1c1c1c;
+    background-color: #eeeeee;
+    border-radius: 1px;
+    padding: 10px;
+    position: relative;
+    font-family: Arial;
+}
+
+.player-card-open {
+    height: auto;
+}
+
+.player-profile-bar-title {
+    display: none;
+}
+
+.player-card-header {
+    font-family: Arial;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+    color: #1c1c1c;
+    margin-bottom: 5px;
+}
+
+.player-profile-icon {
+    float: left;
+    width: 50px;
+    height: 50px;
+    background-color: #d3ffd2;
+    font-family: Arial;
+    font-size: 24px;
+    font-weight: bold;
+    color: #7b987b;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    background-image: url('player-avatar.png');
+    background-size: cover;
+}
+
+.player-profile-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.player-profile-text {
+    float: left;
+    margin-left: 5px;
+}
+
+.player-level, .player-name{
+    display: inline-block;
+    font-family: Arial;
+}
+
+.player-level {
+    color: grey;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.player-name {
+    color: #1c1c1c;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.player-profile-bar {
+    width: 160px;
+    height: 5px;
+    margin-left: 5px;
+    margin-top: 2px;
+}
+
+.player-profile-health {
+    background-color: #ffacac;
+}
+
+.player-profile-health-bar {
+    background-color: #d72929;
+    width: 100%;
+    height: 100%;
+}
+
+.player-profile-exp {
+    background-color: #e2da99;
+}
+
+.player-profile-exp-bar {
+    background-color: #d6c12a;
+    width: 0%;
+}
+
+.player-bar-title, .player-bar-value {
+    display: inline-block;
+    margin-left: 5px;
+    margin-top: 3px;
+    font-family: Arial;
+    font-size: 12px;
+}
+
+.player-account-details, .player-inventory-details {
+    position: absolute;
+    bottom: 10px;
+}
+
+.player-account-value, .player-inventory-value {
+    font-size: 30px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.player-account-value {
+    color: #debd00;
+}
+
+.player-card-key {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 12px;
+    color: #eeeeee;
+    background-color: #555555;
+    width: 30px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+}
+
+.site-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.fight-area {
+    width: 800px;
+    height: 650px;
+    background-color: #eeeeee;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    overflow: hidden;
+    display: none;
+}
+
+.fight-area-header {
+    width: 100%;
+    height: 50px;
+    background-color: #dbdbdb;
+    line-height: 50px;
+    text-align: center;
+    font-family: Arial;
+    font-size: 18px;
+    font-weight: bold;
+    color: #1c1c1c;
+    font-style: italic;
+}
+
+.fight-area-content {
+    position: relative;
+    height: 370px;
+}
+
+.fight-area-runaway {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    background-color: #1c1c1c;
+    padding: 10px;
+    font-weight: bold;
+    font-style: default;
+    color: #ededed
+}
+
+.monster-profile {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 250px;
+    height: 100px;
+}
+
+.monster-profile-icon {
+    float: left;
+    width: 44px;
+    height: 44px;
+    background-color: pink;
+    font-family: Arial;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff6f87;
+    padding: 3px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.monster-profile-details {
+    float: left;
+    height: 50px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.monster-name {
+    font-family: Arial;
+    font-size: 20px;
+    font-weight: bold;
+    color: #1c1c1c;
+}
+
+.monster-profile-health {
+    width: 180px;
+    height: 15px;
+    position: relative;
+    background-color: #ffacac;
+    z-index: 1
+}
+
+.monster-profile-health-value {
+    color: #fff;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: left;
+    margin-left: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.monster-profile-health-bar-intermediate {
+    width: 100%;
+    height: 100%;
+    background-color: #ff6c6c;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.monster-profile-health-bar {
+    width: 100%;
+    height: 100%;
+    background-color: #d72929;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.fight-area-logs {
+    position: absolute;
+    top: 100px;
+    left: 10px;
+    width: 300px;
+    height: 150px;
+    overflow-y: hidden;
+    padding: 5px;
+    font-family: Arial;
+    font-size: 12px;
+    color: #555555;
+    position: relative;
+}
+
+.fight-area-logs-obscure {
+    background: linear-gradient(to bottom, transparent, #eeeeee);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.fight-area-log {
+    font-size: 18px;
+    letter-spacing: -1px;
+    margin-bottom: 5px;
+    color: #878787;
+}
+
+.fight-area-log-name {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.fight-area-log:first-child {
+    color: #1c1c1c;
+}
+
+.fight-area-log-emphasize {
+    font-weight: bold;
+}
+
+.fight-area-monster img {
+    height: 200px;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translate(-10%);
+}
+
+.fight-profile {
+    position: absolute;
+    left: 10px;
+    bottom: -40px;
+    width: 250px;
+    height: 100px;
+}
+
+.fight-profile-icon {
+    float: left;
+    width: 44px;
+    height: 44px;
+    background-color: pink;
+    font-family: Arial;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff6f87;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    background-image: url('player-avatar.png');
+    background-size: cover;
+}
+
+.fight-profile-details {
+    float: left;
+    height: 55px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.fight-profile-bar {
+    width: 180px;
+    height: 15px;
+    z-index: 1;
+}
+
+.fight-profile-health {
+    position: relative;
+    background-color: #ffacac;
+    z-index: 1;
+    margin-bottom: 3px;
+}
+
+.fight-profile-health-value {
+    color: #fff;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: left;
+    margin-left: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.fight-profile-health-bar {
+    width: 100%;
+    height: 100%;
+    background-color: #d72929;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.fight-profile-exp {
+    position: relative;
+    background-color: #e2da99;
+    z-index: 1
+}
+
+.fight-profile-exp-value {
+    color: #fff;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: left;
+    margin-left: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.fight-profile-exp-bar {
+    width: 0%;
+    height: 100%;
+    background-color: #d6c12a;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.fight-profile-health-value {
+    color: #fff;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: left;
+    margin-left: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.fight-profile-health-bar {
+    width: 100%;
+    height: 100%;
+    background-color: #d72929;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.fight-area-footer {
+    width: 100%;
+    height: 230px;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+}
+
+.fight-area-skills {
+    float: left;
+    width: calc(65% - 20px);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.fight-area-inventory {
+    float: left;
+    width: calc(35% - 20px);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.fight-area-skills-header, .fight-area-inventory-header {
+    background-color: #1c1c1c;
+    height: 30px;
+    width: calc(100% - 20px);
+    padding-left: 20px;
+    margin-bottom: 5px;
+    line-height: 30px;
+    text-align: left;
+    font-family: Arial;
+    font-size: 18px;
+    font-weight: bold;
+    color: #e4e4e4;
+    font-style: italic;
+}
+
+.skill-item {
+    width: 100%;
+    height: 60px;
+    margin-bottom: 5px;
+    font-size: 10px;
+}
+
+.skill-item-active {
+    /* background-color: #d6d6d6; */
+    background-color: rgb(155, 128, 128);
+}
+
+.skill-name {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 15px;
+}
+
+.skill-description {
+    font-size: 12px;
+    color: #666666;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 10px;
+}
+
+.skills-left-column, .skills-right-column {
+    float: left;
+    width: 50%;
+}
+
+.skills-left-column .skill-item-icon {
+    float: right;
+    margin-left: 10px;
+}
+
+.skills-left-column .skill-item-details {
+    text-align: right;
+}
+
+.skills-right-column .skill-item-icon {
+    float: left;
+    margin-right: 10px;
+}
+
+.skill-item-icon-1 {
+    margin-right: 20px;
+    background-image: url("/skills-pics/1.png");
+    background-size: cover;
+}
+
+.skill-item-icon-2 {
+    margin-right: 10px;
+    background-image: url("/skills-pics/2.png");
+    background-size: cover;
+}
+
+.skill-item-icon-3 {
+    margin-right: 0px;
+    background-image: url("/skills-pics/3.png");
+    background-size: cover;
+}
+
+.skill-item-icon-4 {
+    margin-left: 0px;
+    background-image: url("/skills-pics/4.png");
+    background-size: cover;
+}
+
+.skill-item-icon-5 {
+    margin-left: 10px;
+    background-image: url("/skills-pics/5.png");
+    background-size: cover;
+}
+
+.skill-item-icon-6 {
+    margin-left: 20px;
+    background-image: url("/skills-pics/6.png");
+    background-size: cover;
+}
+
+.skill-item-icon {
+    width: 44px;
+    height: 44px;
+    background-color: pink;
+    font-family: Arial;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff6f87;
+    padding: 3px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.skill-key {
+    width: 15px;
+    height: 15px;
+    color: #eeeeee;
+    background-color: black;
+    font-weight: 200;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 10px;
+    line-height: 15px;
+    text-align: center;
+    opacity: 0.7;
+}
+
+.skill-item-icon-obscure {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: block;
+}

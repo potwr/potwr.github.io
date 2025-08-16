@@ -1,0 +1,86 @@
+let skills = [
+  {
+    id: 1,
+    name: "Quick Jab",
+    description: "A fast and reliable single strike.",
+    hits: 1,
+    damagePerHit: { min: 30, max: 50 },
+    critChance: 0.1, // 10% chance
+    effects: [],
+    cooldown: 1,
+    readyToUse: true,
+    castTime: 1,
+    target: "enemy",
+    animation: "quick_jab"
+  },
+  {
+    id: 2,
+    name: "Twin Blades",
+    description: "Two rapid slashes in quick succession.",
+    hits: 2,
+    damagePerHit: { min: 30, max: 40 },
+    critChance: 0.15,
+    effects: [],
+    cooldown: 3,
+    readyToUse: true,
+    castTime: 1,
+    target: "enemy",
+    animation: "twin_blades"
+  },
+  {
+    id: 3,
+    name: "Heavy Swing",
+    description: "A strong overhead swing aimed to deal heavy damage.",
+    hits: 1,
+    damagePerHit: { min: 80, max: 100 },
+    critChance: 0.2,
+    effects: [],
+    cooldown: 5,
+    readyToUse: true,
+    castTime: 1.0,
+    target: "enemy",
+    animation: "heavy_swing"
+  },
+  {
+    id: 4,
+    name: "Bandage Up",
+    description: "Wraps a bandage to restore your own health.",
+    hits: 1,
+    damagePerHit: { min: 100, max: 100 },
+    critChance: 0.0,
+    effects: [],
+    cooldown: 6,
+    readyToUse: true,
+    castTime: 1.5,
+    target: "self",
+    animation: "bandage_up"
+  },
+  {
+    id: 5,
+    name: "Stone Shot",
+    description: "Fires a stone from a slingshot at the target.",
+    hits: 1,
+    damagePerHit: { min: 50, max: 70 },
+    critChance: 0.25,
+    effects: [],
+    cooldown: 4,
+    readyToUse: true,
+    castTime: 1,
+    target: "enemy",
+    animation: "stone_shot"
+  },
+  {
+    id: 6,
+    name: "Blade Frenzy",
+    description: "A furious assault of six rapid strikes.",
+    hits: 6,
+    damagePerHit: { min: 15, max: 30 },
+    critChance: 0.15,
+    effects: [],
+    cooldown: 15,
+    readyToUse: true,
+    castTime: 2,
+    target: "enemy",
+    animation: "blade_frenzy"
+  }
+];
