@@ -54,7 +54,7 @@ export async function submitEndgameFormular() {
   if (name.length < 3) {
     $('.engame-input-alert').text("Please enter a valid name with at least 3 characters.");
   }
-  else {
+  else if (endFormularSubmitted == false){
     const { data, error } = await supabase
     .from('scoreboard')
     .insert([
