@@ -3,6 +3,12 @@ import('./endgame.js').then(module => {
     submitEndgameFormular = module.submitEndgameFormular;
 });
 
+window.addEventListener('keydown', function(e) {
+  if(e.code == "Space" && e.target == document.body) {
+    e.preventDefault();
+  }
+});
+
 var ingredientsList = [
     {name: "bun", key: "Space", penalty: 10}, //0
     {name: "cheese", key: "KeyC", penalty: 1}, //1
