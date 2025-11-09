@@ -187,7 +187,7 @@ input[type=number] {
 }
 
 .character-symbol-of-default-player5 {
-    filter: invert(85%) sepia(29%) saturate(565%) hue-rotate(32deg) brightness(90%) contrast(89%);
+    filter: invert(27%) sepia(17%) saturate(1140%) hue-rotate(297deg) brightness(97%) contrast(90%);
 }
 
 .player-name {

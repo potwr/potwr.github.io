@@ -9,7 +9,7 @@ var playerList = [
     ["Nilo", false, 0, 2, 'Druciarz', 'Mateusz'],
     ["Lilith", false, 0, 3, 'Tkaczka Zaklęć', 'Marzena'],
     ["Squick", false, 0, 4, 'Myślołap', 'Kuba'],
-    ["Cali", false, 0, 5, 'Szelma', 'Maciek']
+    ["Baller", false, 0, 5, 'Chirurg', 'Maciek']
 ];
 
 function closeAddPlayerAlert()
@@ -73,7 +73,7 @@ function createPlayerTableCode(a)
             break;
 
         case 5:
-            playerTableCode = playerTableCode + 'background-position: 0% 20%; background-size: 100%; box-shadow: inset 0 0 0 1000px rgba(174,208,118,0.5);'
+            playerTableCode = playerTableCode + 'background-position: 0% 20%; background-size: 100%; box-shadow: inset 0 0 0 1000px rgba(112,65,75,0.5);'
             break;
     }
 
