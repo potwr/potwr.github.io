@@ -9,7 +9,7 @@ var playerList = [
     ["Nilo", false, 0, 2, 'Druciarz', 'Mateusz'],
     ["Lilith", false, 0, 3, 'Tkaczka Zaklęć', 'Marzena'],
     ["Squick", false, 0, 4, 'Myślołap', 'Kuba'],
-    ["Baller", false, 0, 5, 'Chirurg', 'Maciek']
+    ["Baller", false, 0, 5, 'Łapiduch', 'Maciek']
 ];
 
 function closeAddPlayerAlert()
