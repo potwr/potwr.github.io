@@ -6,7 +6,7 @@
 
 var playerList = [
     ['Ponury', false, 0, 1, 'Kark', 'Adrian'],
-    ["Nilo", false, 0, 2, 'Druciarz', 'Mateusz'],
+    ["Thyme", false, 0, 2, 'Przywoływaczka', 'Mateusz'],
     ["Lilith", false, 0, 3, 'Tkaczka Zaklęć', 'Marzena'],
     ["Squick", false, 0, 4, 'Myślołap', 'Kuba'],
     ["Baller", false, 0, 5, 'Łapiduch', 'Maciek']
@@ -61,11 +61,11 @@ function createPlayerTableCode(a)
             break;
 
         case 2:
-            playerTableCode = playerTableCode + 'background-position: 0% 34%; background-size: 100%; box-shadow: inset 0 0 0 1000px rgba(194,183,146,0.6);'
+            playerTableCode = playerTableCode + 'background-position: 0% 22%; background-size: 100%; box-shadow: inset 0 0 0 1000px rgba(140,98,185,0.4);'
             break;
 
         case 3:
-            playerTableCode = playerTableCode + 'background-position: 40% 28%; background-size: 150%; box-shadow: inset 0 0 0 1000px rgba(172,123,176,0.6);'
+            playerTableCode = playerTableCode + 'background-position: 40% 28%; background-size: 150%; box-shadow: inset 0 0 0 1000px rgba(172,123,176,0.4);'
             break;
 
         case 4:
@@ -73,7 +73,7 @@ function createPlayerTableCode(a)
             break;
 
         case 5:
-            playerTableCode = playerTableCode + 'background-position: 0% 20%; background-size: 100%; box-shadow: inset 0 0 0 1000px rgba(112,65,75,0.5);'
+            playerTableCode = playerTableCode + 'background-position: 0% 20%; background-size: 100%; box-shadow: inset 0 0 0 1000px rgba(61,51,45,0.6);'
             break;
     }
 
@@ -141,7 +141,7 @@ function addPlayer()
     }
     else
     {
-        playerType="Sojusznik";
+        playerType = "Sojusznik";
     }
 
     playerList.push([document.getElementById("playername").value, document.getElementById("playermonster").checked, 0, undefined, playerType, document.getElementById("owner").value]);
@@ -187,8 +187,22 @@ function sortPlayers()
 
 function deletePlayer(number)
 {
+    // Update playerList with current initiative values before deleting
+    for(let i = 0; i < playerList.length; i++){
+        let className = 'player-line-initiative-input-' + (i+1);
+        playerList[i][2] = parseInt(document.getElementById(className).value);
+    }
+    
     playerList.splice(number, 1);
-    sortPlayers();
+    
+    // Sort the updated list
+    playerList.sort(compareByInitiative);
+    
+    // Recreate the table
+    $('.player-table').empty();
+    for(let k = 1; k <= playerList.length; k++){
+        createPlayerTableCode(k);
+    }
 }
 
 function addFirstPlayers()

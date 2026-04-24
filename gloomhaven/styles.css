@@ -175,7 +175,7 @@ input[type=number] {
 }
 
 .character-symbol-of-default-player2 {
-    filter: invert(75%) sepia(42%) saturate(198%) hue-rotate(9deg) brightness(93%) contrast(84%);
+    filter: invert(45%) sepia(10%) saturate(2437%) hue-rotate(226deg) brightness(95%) contrast(92%);
 }
 
 .character-symbol-of-default-player3 {
@@ -187,7 +187,7 @@ input[type=number] {
 }
 
 .character-symbol-of-default-player5 {
-    filter: invert(27%) sepia(17%) saturate(1140%) hue-rotate(297deg) brightness(97%) contrast(90%);
+    filter: invert(18%) sepia(19%) saturate(516%) hue-rotate(339deg) brightness(91%) contrast(89%);
 }
 
 .player-name {
@@ -324,7 +324,7 @@ input[type=number] {
 }
 
 .default-player2 {
-    color: rgb(194, 183, 146);
+    color: rgb(140,98,185);
 }
 
 .default-player3 {
@@ -336,7 +336,7 @@ input[type=number] {
 }
 
 .default-player5 {
-    color: rgb(174, 208, 118);
+    color: rgb(61, 51, 45);
 }
 
 .character-symbol {
