@@ -120,7 +120,7 @@ input[type=number] {
 
 .player-line-top-titles {
     float: left;
-    width: 64%;
+    width: 79%;
     margin-top: 13.5%;
     margin-left: 0;
 }
@@ -171,7 +171,7 @@ input[type=number] {
 }
 
 .character-symbol-of-default-player1 {
-    filter: invert(67%) sepia(32%) saturate(605%) hue-rotate(156deg) brightness(87%) contrast(84%);
+    filter: invert(50%) sepia(12%) saturate(1068%) hue-rotate(38deg) brightness(96%) contrast(86%);
 }
 
 .character-symbol-of-default-player2 {
@@ -207,6 +207,93 @@ input[type=number] {
     letter-spacing: -5px;
 }
 
+.summon-line {
+    width: 80%;
+    height: 200px;
+    border-radius: 80px;
+    margin-left: 17%;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.15);
+    background-color: rgb(255, 255, 255);
+    font-family: 'Pirata One';
+    color: #000;
+    font-size: 300%;
+    display: block;
+}
+
+.summon-line-top {
+    height: 110px;
+    background-image: url('backgrounds/ally.jpeg');
+    background-size: 160%;
+    background-position: 40% 37%;
+    box-shadow: inset 0 0 0 1000px rgba(187, 132, 50, 0.6);
+    color: #fff;
+}
+
+.summon-title {
+    font-family: 'Pirata One';
+    color: #fff;
+    font-size: 60px;
+    line-height: 110px;
+    margin-left: 80px;
+}
+
+.delete-summon {
+    background: none;
+    border: none;
+    font-family: 'Pirata One';
+    color: #fff;
+    font-size: 80px;
+    float: right;
+    margin-right: 35px;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(187, 132, 50, 0.1);
+    border-radius: 20px;
+    margin-top: 8px;
+}
+
+.summon-line-bottom {
+    height: 90px;
+}
+
+.summon-name {
+    font-family: 'Pirata One';
+    color: #000;
+    font-size: 60px;
+    line-height: 90px;
+    float: left;
+    margin-left: 80px;
+}
+
+.summon-token {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    float: left;
+    margin-left: 50px;
+    margin-right: 20px;
+    margin-top: 35px;
+    opacity: 1;
+    overflow: hidden;
+}
+
+.summon-token-number {
+    font-size: 60px;
+    font-weight: bold;
+    line-height: 120px;
+    font-family: 'Pirata One';
+    width: 40%;
+    height: 100%;
+    opacity: 1;
+    background-color: black;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
 .wrapper {
     z-index: 1;
 }
@@ -224,6 +311,18 @@ input[type=number] {
 
 .add-player-alert {
     z-index: 4;
+    width: 90%;
+    background-color: #fff;
+    position: fixed;
+    top: 15%;
+    left: 5%;
+    border-radius: 60px;
+    overflow: hidden;
+    display: none;
+}
+
+.add-summon-alert {
+    z-index: 5;
     width: 90%;
     background-color: #fff;
     position: fixed;
@@ -271,7 +370,7 @@ input[type=number] {
     padding-bottom: 40px;
 }
 
-.add-player-alert-body #playername, .add-player-alert-body #owner {
+.add-player-alert-body #playername, .add-player-alert-body #owner, .add-player-alert-body #summonname {
     background-color: rgba(32, 32, 32, 0.4);
     border: none;
     font-size: 60px;
@@ -315,6 +414,61 @@ input[type=number] {
     color: #fff;
 }
 
+.summon-select-wrapper {
+    background-color: rgba(32, 32, 32, 0.4);
+    width: calc(75% - 20px);
+    height: 90px;
+    border-radius: 30px;
+    margin-left: -20px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    display: block;
+    overflow: hidden;
+    border-radius: 30px;
+}
+
+#summoncolor {
+    background-color: rgba(32, 32, 32, 0.0);
+    border: none;
+    font-size: 60px;
+    font-family: 'Crimson Text';
+    color: #fff;
+    width: calc(100% - 20px);
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.summon-number-wrapper {
+    margin-left: -20px;
+    margin-top: 10px;
+}
+
+.summon-number-default-button {
+    background: none;
+    border: none;
+    font-size: 60px;
+    font-family: 'Crimson Text';
+    color: #fff;
+    width: 160px;
+    height: 100px;
+    background-color: rgba(32, 32, 32, 0.4);
+    border-radius: 20px;
+    margin-right: 20px;
+}
+
+.summon-number-active-button {
+    background: none;
+    border: none;
+    font-size: 60px;
+    font-family: 'Crimson Text';
+    color: #fff;
+    width: 160px;
+    height: 100px;
+    background-color: rgba(32, 32, 32, 1);
+    border-radius: 20px;
+    margin-right: 20px;
+}
+
 .monster-name-old {
     color: #730b00;
 }
@@ -356,8 +510,28 @@ label:focus,
 .btn:active,
 .btn.active
 {
-    outline:0px !important;
+    outline: 0px !important;
     -webkit-appearance: none;
     appearance: none;
     box-shadow: none !important;
+}
+
+.add-summon-button {
+    font-family: 'Pirata One';
+    color: #fff;
+    font-size: 300%;
+    background: none;
+    border: none;
+    background-color: none;
+    display: block;
+    float: right;
+}
+
+.summons-list {
+    font-family: 'Pirata One';
+    color: #000;
+    font-size: 300%;
+    display: block;
+    margin-top: 10px;
+    display: block;
 }

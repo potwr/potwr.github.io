@@ -63,24 +63,47 @@
 
     <div class="add-player-alert">
         <div class="add-player-alert-header">
-            <span>Dane gracza</span>
+            <span>Nazwa przeciwnika</span>
             <button class="close-add-player-alert" onclick="closeAddPlayerAlert()">X</button>
         </div>
 
         <div class="add-player-alert-body">
             <form name="addplayeralert">
-                <label for="playername">Nazwa gracza</label><br>
-                <input type="text" id="playername" name="playername"><br>
-                <label for="owner">Właściciel</label><br>
-                <input type="text" id="owner" name="owner"><br>
-                <input type="checkbox" id="playermonster" name="playermonster" checked>
-                <label for="playermonster">Przeciwnik</label>
+                <label for="playername">Nazwa przeciwnika</label><br>
+                <input type="text" id="playername" name="playername">
             </form>
-             <button class="run-add-player" onclick="addPlayer()">Dodaj gracza</button>   
+             <button class="run-add-player" onclick="addPlayer()">Dodaj przeciwnika</button>   
+        </div>
+    </div>
+
+    <div class="add-summon-alert">
+        <div class="add-player-alert-header">
+            <span>Nazwa sojusznika</span>
+            <button class="close-add-player-alert" onclick="closeAddSummonAlert()">X</button>
+        </div>
+
+        <div class="add-player-alert-body">
+            <form name="addplayeralert">
+                <label for="summonname">Nazwa sojusznika</label><br>
+                <input type="text" id="summonname" name="summonname"><br>
+
+                <label for="summoncolor">Kolor</label><br>
+                <div class="summon-select-wrapper"><select id="summoncolor" name="summoncolor"></select></div>
+
+                <label for="summonnumber">Numer</label><br>
+                <div class="summon-number-wrapper">
+                    <button type="button" class="summon-number-default-button summon-number-active-button" onclick="activateSummonNumberButton(this, 1)">1</button>
+                    <button type="button" class="summon-number-default-button" onclick="activateSummonNumberButton(this, 2)">2</button>
+                    <button type="button" class="summon-number-default-button" onclick="activateSummonNumberButton(this, 3)">3</button>
+                    <button type="button" class="summon-number-default-button" onclick="activateSummonNumberButton(this, 4)">4</button>
+                </div>
+            </form>
+            <button class="run-add-player" onclick="addSummonToPlayer(playerIndexNumber)">Dodaj sojusznika</button>   
         </div>
     </div>
 </body>
 
 <script>
     addFirstPlayers();
+    fillSummonColorsSelect();
 </script>

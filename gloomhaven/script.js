@@ -5,19 +5,49 @@
 //https://www.gloomhavencards.com/gh/characters/SC
 
 var playerList = [
-    ['Ponury', false, 0, 1, 'Kark', 'Adrian'],
-    ["Thyme", false, 0, 2, 'Przywoływaczka', 'Mateusz'],
-    ["Lilith", false, 0, 3, 'Tkaczka Zaklęć', 'Marzena'],
-    ["Squick", false, 0, 4, 'Myślołap', 'Kuba'],
-    ["Baller", false, 0, 5, 'Łapiduch', 'Maciek']
+    ["Davy Jones", false, 0, 1, 'Dreszczowiec', 'Adrian', []],
+    ["Thyme", false, 0, 2, 'Przywoływaczka', 'Mateusz', []],
+    ["Lilith", false, 0, 3, 'Tkaczka Zaklęć', 'Marzena', []],
+    ["Squick", false, 0, 4, 'Myślołap', 'Kuba', []],
+    ["Baller", false, 0, 5, 'Łapiduch', 'Maciek', []]
 ];
+
+var playerIndexNumber;
+
+var summonTokensColors = [
+    {"name": 'fioletowy', "color": '#8a4cd1'},
+    {"name": 'zielony', "color": '#a3c755'},
+    {"name": 'czerwony', "color": '#d33030'},
+    {"name": 'niebieski', "color": '#144393'},
+    {"name": 'różowy', "color": '#c169c9'},
+    {"name": 'pomarańczowy', "color": '#d3760b'},
+    {"name": 'żółty', "color": '#eeda5b'},
+    {"name": 'szary', "color": '#737373'}
+];
+
+function handleInitiativeInput(event) {
+    const input = event.target;
+    const value = input.value;
+    
+    // Check if value has 2 digits (value >= 10)
+    if (value.length >= 2 || (value && parseInt(value) >= 10)) {
+        // Get current player index from input ID
+        const currentIndex = parseInt(input.id.split('-').pop());
+        const nextIndex = currentIndex + 1;
+        const nextInput = document.getElementById('player-line-initiative-input-' + nextIndex);
+        
+        // If next input exists, focus on it and select its value
+        if (nextInput) {
+            nextInput.focus();
+            nextInput.select();
+        }
+    }
+}
 
 function closeAddPlayerAlert()
 {
     $('.add-player-alert').css("display", "none");
     document.getElementById('playername').value = '';
-    document.getElementById('owner').value = '';
-    document.getElementById('playermonster').checked = true;
     $('.add-player-alert-background').css("display", "none");
 }
 
@@ -29,35 +59,36 @@ function openAddPlayerAlert()
 }
 
 var starterCharacters = [
-    ['Ponury', false, 0, 1, 'Kark', 'Adrian'],
-    ["Nilo", false, 0, 2, 'Druciarz', 'Mateusz'],
-    ["Lilith", false, 0, 3, 'Tkaczka Zaklęć', 'Marzena'],
-    ["Squick", false, 0, 4, 'Myślołap', 'Kuba'],
-    ["Cali", false, 0, 5, 'Szelma', 'Maciek']
+    ["Davy Jones", false, 0, 1, 'Dreszczowiec', 'Adrian', []],
+    ["Thyme", false, 0, 2, 'Przywoływaczka', 'Mateusz', []],
+    ["Lilith", false, 0, 3, 'Tkaczka Zaklęć', 'Marzena', []],
+    ["Squick", false, 0, 4, 'Myślołap', 'Kuba', []],
+    ["Baller", false, 0, 5, 'Łapiduch', 'Maciek', []]
 ]
 
-function createPlayerTableCode(a)
+function createPlayerTableCode(playerObj, playerIndex)
 {
+    let player = playerObj;
     let playerTableCode = '<div class="player-line"><div class="player-line-top" style="background-image: url(backgrounds/';
     
-    if(playerList[a-1][1] == false && playerList[a-1][3] != undefined)
+    if(player[1] == false && player[3] != undefined)
     {
-        playerTableCode = playerTableCode + playerList[a-1][3] + '.jpeg); background-size: 250%; ';
+        playerTableCode = playerTableCode + player[3] + '.jpeg); background-size: 250%; ';
     }
 
-    if(playerList[a-1][1] == true)
+    if(player[1] == true)
     {
         playerTableCode = playerTableCode + 'monster.jpeg); background-position: 0% 20%; background-size: 100%; box-shadow: inset 0 0 0 1000px rgba(115,11,0,0.6); ';
     }
 
-    if(playerList[a-1][1] == false && playerList[a-1][3] == undefined)
+    if(player[1] == false && player[3] == undefined)
     {
         playerTableCode = playerTableCode + 'ally.jpeg); background-position: 50% 40%; box-shadow: inset 0 0 0 1000px rgba(172,119,21,0.6); background-size: 200%; ';
     }
     
-    switch(playerList[a-1][3]) {
+    switch(player[3]) {
         case 1:
-            playerTableCode = playerTableCode + 'background-position: 0% 35%; background-size: 100%; box-shadow: inset 0 0 0 1000px rgba(97,166,201,0.6);'
+            playerTableCode = playerTableCode + 'background-position: 50% 5%; background-size: 100%; box-shadow: inset 0 0 0 1000px rgba(118,133,86,0.4);'
             break;
 
         case 2:
@@ -69,7 +100,7 @@ function createPlayerTableCode(a)
             break;
 
         case 4:
-            playerTableCode = playerTableCode + 'background-position: 0% 27%; background-size: 100%; box-shadow: inset 0 0 0 1000px rgba(106,123,153,0.6);'
+            playerTableCode = playerTableCode + 'background-position: 0% 27%; background-size: 100%; box-shadow: inset 0 0 0 1000px rgba(106,123,153,0.4);'
             break;
 
         case 5:
@@ -77,76 +108,50 @@ function createPlayerTableCode(a)
             break;
     }
 
-    playerTableCode = playerTableCode + '"><div class="player-line-top-left"><input class="player-line-initiative-input" type="number" min="0" max="99" inputmode="numeric" pattern="[0-9]{2}" value="'+playerList[a-1][2]+'" id="player-line-initiative-input-'+a+'" onclick="this.select();"><div class="player-line-top-titles"><span class="titles-class-name">'+playerList[a-1][4]+'</span>';
+    playerTableCode = playerTableCode + '"><div class="player-line-top-left"><input class="player-line-initiative-input" type="number" min="0" max="99" inputmode="numeric" pattern="[0-9]{2}" value="'+player[2]+'" id="player-line-initiative-input-'+playerIndex+'" onclick="this.select();" oninput="handleInitiativeInput(event)"><div class="player-line-top-titles"><span class="titles-class-name">'+player[4]+'</span>';
     
-    if(playerList[a-1][1] != true)
+    if(player[1] != true)
     {
-        playerTableCode = playerTableCode + '<span class="titles-divider">·</span><span class="titles-player-real-name">'+playerList[a-1][5]+'</span>';
+        playerTableCode = playerTableCode + '<span class="titles-divider">·</span><span class="titles-player-real-name">'+player[5]+'</span><button class="add-summon-button" onclick="openAddSummonAlert('+playerIndex+')">+towarzysz</button>';
     }
     
-    playerTableCode = playerTableCode + '</div></div><div class="player-line-top-right"><button class="delete-player" onclick="deletePlayer('+(a-1)+')">X</button></div></div><div class="player-line-bottom">';
+    playerTableCode = playerTableCode + '</div></div><div class="player-line-top-right"><button class="delete-player" onclick="deletePlayer('+playerIndex+')">X</button></div></div><div class="player-line-bottom">';
 
-    if(playerList[a-1][1] == true || (playerList[a-1][1] == false && playerList[a-1][3] == undefined))
+    if(player[1] == true || (player[1] == false && player[3] == undefined))
     {
         playerTableCode = playerTableCode + '<span class="player-name monster-name">';
     }
 
-    if(playerList[a-1][3] != undefined)
+    if(player[3] != undefined)
     {
-        playerTableCode = playerTableCode + '<img class="character-symbol character-symbol-of-default-player'+playerList[a-1][3]+'" src="symbols/'+playerList[a-1][3]+'.svg"><span class="player-name">';
+        playerTableCode = playerTableCode + '<img class="character-symbol character-symbol-of-default-player'+player[3]+'" src="symbols/'+player[3]+'.svg"><span class="player-name">';
     }
 
-    playerTableCode = playerTableCode + playerList[a-1][0];
+    playerTableCode = playerTableCode + player[0];
 
-    if(playerList[a-1][1] == true || playerList[a-1][3] != undefined)
+    if(player[1] == true || player[3] != undefined)
     {
-        playerTableCode = playerTableCode + '</span>';
+        playerTableCode = playerTableCode + '</span></div></div>';
     }
 
-    $('.player-table').append(playerTableCode);
-}
-
-function createPlayerTableCodeOld(a)
-{
-    let playerTableCode = '<div class="player-line"><div class="player-line-order-number">'+a+'</div><div class="player-line-name">';
-    
-    if(playerList[a-1][1] == true)
+    if(player[6].length > 0)
     {
-        playerTableCode = playerTableCode + '<span class="monster-name">';
+        for(let i = 0; i < player[6].length; i++)
+        {
+            playerTableCode = playerTableCode + '<div class="summon-token" style="background-color: '+player[6][i][1]+';"><div class="summon-token-number">'+player[6][i][3]+'</div></div><div class="summon-line"><div class="summon-line-top"><span class="summon-title">Sojusznik</span><button class="delete-summon" onclick="deleteSummon('+playerIndex+', '+i+')">X</button></div><div class="summon-line-bottom"><span class="summon-name">'+player[6][i][0]+'</span></div>';
+        }
     }
 
-    if(playerList[a-1][3] != undefined)
-    {
-        playerTableCode = playerTableCode + '<img class="character-symbol" src="symbols/'+playerList[a-1][3]+'.png"><span class="default-player'+playerList[a-1][3]+'">';
-    }
-
-    playerTableCode = playerTableCode + playerList[a-1][0];
-    
-    if(playerList[a-1][1] == true || playerList[a-1][3] != undefined)
-    {
-        playerTableCode = playerTableCode + '</span>';
-    }
-    
-    playerTableCode = playerTableCode + '</div><button class="delete-player" onclick="deletePlayer('+(a-1)+')">X</button><div class="player-line-initiative"><input type="number" value="'+playerList[a-1][2]+'" class="player-line-initiative-input" id="player-line-initiative-input-'+a+'"></div></div>';
-    
     $('.player-table').append(playerTableCode);
 }
 
 function addPlayer()
 {
-    let playerType;
-    if(document.getElementById("playermonster").checked == true)
-    {
-        playerType = "Przeciwnik";
-    }
-    else
-    {
-        playerType = "Sojusznik";
-    }
+    let playerType = "Przeciwnik";
 
-    playerList.push([document.getElementById("playername").value, document.getElementById("playermonster").checked, 0, undefined, playerType, document.getElementById("owner").value]);
+    playerList.push([document.getElementById("playername").value, true, 0, undefined, playerType, '', []]);
     
-    createPlayerTableCode(playerList.length);
+    createPlayerTableCode(playerList[playerList.length - 1], playerList.length - 1);
     
     closeAddPlayerAlert();
 }
@@ -169,19 +174,19 @@ function compareByInitiative(a, b) {
 function sortPlayers()
 {
     let a = playerList.length;
-    for(k=1; k<=a; k++)
+    for(k=0; k<a; k++)
     {
         className = 'player-line-initiative-input-'+k;
-        playerList[k-1][2] = parseInt(document.getElementById(className).value);
+        playerList[k][2] = parseInt(document.getElementById(className).value);
     }
 
     playerList.sort(compareByInitiative);
     
     $('.player-table').empty();
 
-    for(k=1; k<=a; k++)
+    for(k=0; k<a; k++)
     {
-        createPlayerTableCode(k);
+        createPlayerTableCode(playerList[k], k);
     }
 }
 
@@ -189,7 +194,7 @@ function deletePlayer(number)
 {
     // Update playerList with current initiative values before deleting
     for(let i = 0; i < playerList.length; i++){
-        let className = 'player-line-initiative-input-' + (i+1);
+        let className = 'player-line-initiative-input-' + i;
         playerList[i][2] = parseInt(document.getElementById(className).value);
     }
     
@@ -200,15 +205,78 @@ function deletePlayer(number)
     
     // Recreate the table
     $('.player-table').empty();
-    for(let k = 1; k <= playerList.length; k++){
-        createPlayerTableCode(k);
+    for(let k = 0; k < playerList.length; k++){
+        createPlayerTableCode(playerList[k], k);
     }
 }
 
 function addFirstPlayers()
 {
-    for(z=1; z<=5; z++)
+    for(z=0; z<playerList.length; z++)
     {
-        createPlayerTableCode(z);
+        createPlayerTableCode(playerList[z], z);
     }
+}
+
+function openAddSummonAlert(playerIndex) 
+{
+    $('.add-summon-alert').css("display", "block");
+    document.getElementById("summonname").focus();
+    $('.add-player-alert-background').css("display", "block");
+    playerIndexNumber = playerIndex;
+}
+
+function addSummonToPlayer(playerIndex)
+{
+    let summonName = document.getElementById("summonname").value;
+    let summonColor = document.getElementById("summoncolor").value;
+    let summonColorName = document.getElementById("summoncolor").options[document.getElementById("summoncolor").selectedIndex].text;
+    let summonTokenNumber = document.getElementsByClassName("summon-number-active-button")[0].innerText;
+    if(summonName.trim() !== "") {
+        playerList[playerIndex][6].push([summonName, summonColor, summonColorName, summonTokenNumber]);
+    }
+    sortPlayers();
+    closeAddSummonAlert();
+}
+
+function closeAddSummonAlert()
+{
+    $('.add-summon-alert').css("display", "none");
+    document.getElementById('summonname').value = '';
+    document.getElementById('summoncolor').selectedIndex = 0;
+    let buttons = document.getElementsByClassName("summon-number-default-button");
+    for(let i = 0; i < buttons.length; i++)
+    {
+        buttons[i].classList.remove("summon-number-active-button");
+    }
+    buttons[0].classList.add("summon-number-active-button");
+    $('.add-player-alert-background').css("display", "none");
+}
+
+function deleteSummon(playerIndex, summonIndex)
+{
+    playerList[playerIndex][6].splice(summonIndex, 1);
+    // Recreate the table to show the updated summons
+    sortPlayers();
+}
+
+function fillSummonColorsSelect()
+{
+    let select = document.getElementById("summoncolor");
+    for(let i = 0; i < summonTokensColors.length; i++)
+    {
+        let option = '<option value="' + summonTokensColors[i].color + '">' + summonTokensColors[i].name + '</option>';
+        select.innerHTML += option;
+    }
+}
+
+function activateSummonNumberButton(elem, number)
+{
+    let buttons = document.getElementsByClassName("summon-number-default-button");
+    for(let i = 0; i < buttons.length; i++)
+    {
+        buttons[i].classList.remove("summon-number-active-button");
+    }
+    elem.classList.add("summon-number-active-button");
+    
 }
