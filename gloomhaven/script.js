@@ -112,7 +112,7 @@ function createPlayerTableCode(playerObj, playerIndex)
     
     if(player[1] != true)
     {
-        playerTableCode = playerTableCode + '<span class="titles-divider">·</span><span class="titles-player-real-name">'+player[5]+'</span><button class="add-summon-button" onclick="openAddSummonAlert('+playerIndex+')">+towarzysz</button>';
+        playerTableCode = playerTableCode + '<span class="titles-divider">·</span><span class="titles-player-real-name">'+player[5]+'</span>'; //<button class="add-summon-button" onclick="openAddSummonAlert('+playerIndex+')">+towarzysz</button>'
     }
     
     playerTableCode = playerTableCode + '</div></div><div class="player-line-top-right"><button class="delete-player" onclick="deletePlayer('+playerIndex+')">X</button></div></div><div class="player-line-bottom">';
@@ -131,7 +131,7 @@ function createPlayerTableCode(playerObj, playerIndex)
 
     if(player[1] == true || player[3] != undefined)
     {
-        playerTableCode = playerTableCode + '</span></div></div>';
+        playerTableCode = playerTableCode + '</span><button class="add-summon-button" onclick="openAddSummonAlert('+playerIndex+')">+</button></div></div>';
     }
 
     if(player[6].length > 0)
