@@ -15,14 +15,14 @@ var playerList = [
 var playerIndexNumber;
 
 var summonTokensColors = [
-    {"name": 'fioletowy', "color": '#8a4cd1'},
-    {"name": 'zielony', "color": '#a3c755'},
-    {"name": 'czerwony', "color": '#d33030'},
-    {"name": 'niebieski', "color": '#144393'},
-    {"name": 'różowy', "color": '#c169c9'},
-    {"name": 'pomarańczowy', "color": '#d3760b'},
-    {"name": 'żółty', "color": '#eeda5b'},
-    {"name": 'szary', "color": '#737373'}
+    {"name": 'fioletowy', "color": '#624A78'},
+    {"name": 'zielony', "color": '#7B9169'},
+    {"name": 'czerwony', "color": '#8F484A'},
+    {"name": 'niebieski', "color": '#96B3C1'},
+    {"name": 'różowy', "color": '#BE95B6'},
+    {"name": 'pomarańczowy', "color": '#9D6E5F'},
+    {"name": 'żółty', "color": '#B7A16F'},
+    {"name": 'szary', "color": '#857B78'}
 ];
 
 function handleInitiativeInput(event) {
@@ -136,9 +136,12 @@ function createPlayerTableCode(playerObj, playerIndex)
 
     if(player[6].length > 0)
     {
+        console.log("Ilość summonów dla gracza " + player[0] + ": " + player[6].length);
         for(let i = 0; i < player[6].length; i++)
         {
-            playerTableCode = playerTableCode + '<div class="summon-token" style="background-color: '+player[6][i][1]+';"><div class="summon-token-number">'+player[6][i][3]+'</div></div><div class="summon-line"><div class="summon-line-top"><span class="summon-title">Sojusznik</span><button class="delete-summon" onclick="deleteSummon('+playerIndex+', '+i+')">X</button></div><div class="summon-line-bottom"><span class="summon-name">'+player[6][i][0]+'</span></div>';
+            console.log("Dodaję summon " + player[6][i][0] + " dla gracza " + player[0]);
+            playerTableCode = playerTableCode + '<div class="summon-line-wrapper"><div class="summon-token" style="background-color: '+player[6][i][1]+';"><div class="summon-token-number">'+player[6][i][3]+'</div></div><div class="summon-line"><div class="summon-line-top"><span class="summon-title">Sojusznik</span><button class="delete-summon" onclick="deleteSummon('+playerIndex+', '+i+')">X</button></div><div class="summon-line-bottom"><span class="summon-name">'+player[6][i][0]+'</span></div></div></div>';
+            console.log("Dodano summona " + player[6][i][0] + " dla gracza " + player[0]);
         }
     }
 
