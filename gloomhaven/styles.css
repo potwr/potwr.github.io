@@ -183,7 +183,7 @@ input[type=number] {
 }
 
 .character-symbol-of-default-player4 {
-    filter: invert(50%) sepia(16%) saturate(729%) hue-rotate(180deg) brightness(91%) contrast(83%);
+    filter: brightness(0) saturate(100%) invert(77%) sepia(26%) saturate(733%) hue-rotate(128deg) brightness(94%) contrast(87%);
 }
 
 .character-symbol-of-default-player5 {

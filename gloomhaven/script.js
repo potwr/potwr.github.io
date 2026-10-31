@@ -96,11 +96,11 @@ function createPlayerTableCode(playerObj, playerIndex)
             break;
 
         case 3:
-            playerTableCode = playerTableCode + 'background-position: 40% 28%; background-size: 150%; box-shadow: inset 0 0 0 1000px rgba(0.362, 0.830, 0.825, 1);'
+            playerTableCode = playerTableCode + 'background-position: 40% 28%; background-size: 150%; box-shadow: inset 0 0 0 1000px rgba(93,211,208,0.5);'
             break;
 
         case 4:
-            playerTableCode = playerTableCode + 'background-position: 0% 15%; background-size: 100%; box-shadow: inset 0 0 0 1000px rgba(106,123,153,0.4);'
+            playerTableCode = playerTableCode + 'background-position: 0% 15%; background-size: 100%; box-shadow: inset 0 0 0 1000px rgba(93,211,208,0.6);'
             break;
 
         case 5:
