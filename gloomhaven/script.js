@@ -8,7 +8,7 @@ var playerList = [
     ["Davy Jones", false, 0, 1, 'Dreszczowiec', 'Adrian', []],
     ["Thyme", false, 0, 2, 'Przywoływaczka', 'Mateusz', []],
     ["Lilith", false, 0, 3, 'Tkaczka Zaklęć', 'Marzena', []],
-    ["Squick", false, 0, 4, 'Myślołap', 'Kuba', []],
+    ["Ulmus", false, 0, 4, 'Orchid', 'Kuba', []],
     ["Baller", false, 0, 5, 'Łapiduch', 'Maciek', []]
 ];
 
@@ -96,11 +96,11 @@ function createPlayerTableCode(playerObj, playerIndex)
             break;
 
         case 3:
-            playerTableCode = playerTableCode + 'background-position: 40% 28%; background-size: 150%; box-shadow: inset 0 0 0 1000px rgba(172,123,176,0.4);'
+            playerTableCode = playerTableCode + 'background-position: 40% 28%; background-size: 150%; box-shadow: inset 0 0 0 1000px rgba(0.362, 0.830, 0.825, 1);'
             break;
 
         case 4:
-            playerTableCode = playerTableCode + 'background-position: 0% 27%; background-size: 100%; box-shadow: inset 0 0 0 1000px rgba(106,123,153,0.4);'
+            playerTableCode = playerTableCode + 'background-position: 0% 15%; background-size: 100%; box-shadow: inset 0 0 0 1000px rgba(106,123,153,0.4);'
             break;
 
         case 5:
